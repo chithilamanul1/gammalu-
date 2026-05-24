@@ -6,32 +6,29 @@ import styles from './about.module.css';
 
 export default function AboutPage() {
   return (
-    <main>
+    <main className={styles.aboutPage}>
       {/* ── Hero Banner ── */}
       <section className={styles.hero}>
+        <div className={styles.heroCircle} />
         <div className={styles.heroImageWrap}>
           <Image
-            src="/images/spices-dark-moody.png"
-            alt="Premium Ceylon spices spread on dark surface"
+            src="/images/cinnamon-hero.png"
+            alt="Cinnamon sticks and star anise"
             fill
             priority
             className={styles.heroImage}
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, 40vw"
           />
-          <div className={styles.heroOverlay} />
         </div>
         <div className={styles.heroContent}>
           <AnimatedSection direction="up" delay={0.1}>
-            <p className={styles.heroSubtitle}>Since 2020</p>
+            <p className={styles.heroLabel}>Since 2020</p>
           </AnimatedSection>
           <AnimatedSection direction="up" delay={0.25}>
             <h1 className={styles.heroTitle}>Our Heritage</h1>
           </AnimatedSection>
           <AnimatedSection direction="up" delay={0.4}>
-            <div className={styles.heroDivider} />
-          </AnimatedSection>
-          <AnimatedSection direction="up" delay={0.55}>
-            <p className={styles.heroDesc}>
+            <p className={styles.heroSubtitle}>
               From the lush highlands of Ceylon to your table — a legacy of purity, passion, and premium spices.
             </p>
           </AnimatedSection>
@@ -39,8 +36,8 @@ export default function AboutPage() {
       </section>
 
       {/* ── Story Section ── */}
-      <section className={styles.storySection}>
-        <div className={styles.storyContainer}>
+      <section className={`section ${styles.storySection}`}>
+        <div className="container">
           <div className={styles.storyGrid}>
             <AnimatedSection direction="left">
               <div className={styles.storyImageWrap}>
@@ -48,30 +45,26 @@ export default function AboutPage() {
                   src="/images/cinnamon.png"
                   alt="Artisan harvesting cinnamon bark in Sri Lanka"
                   fill
-                  className={styles.storyImg}
+                  className={styles.storyImage}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
-                <div className={styles.storyImageDecor} />
               </div>
             </AnimatedSection>
 
             <AnimatedSection direction="right">
               <div className={styles.storyContent}>
-                <span className={styles.storyLabel}>Our Story</span>
-                <h2 className={styles.storyTitle}>
-                  Rooted in Tradition, Refined by Excellence
-                </h2>
-                <p className={styles.storyText}>
+                <span className="subtitle">Our Story</span>
+                <h2>Rooted in Tradition, Refined by Excellence</h2>
+                <div className="divider" style={{ margin: "24px 0", marginLeft: 0 }} />
+                <p>
                   Gammalu Ceylon Foods was born from a deep reverence for Sri Lanka&apos;s centuries-old spice heritage. Our founders grew up in the verdant hill country, where cinnamon trees line the valleys and pepper vines cling to ancient trees.
                 </p>
-                <p className={styles.storyText}>
+                <p>
                   Today, we partner directly with smallholder farmers across Sri Lanka&apos;s finest growing regions. Every spice is hand-selected, sun-dried using traditional methods, and processed with meticulous care to preserve its full aromatic profile and health-giving properties.
                 </p>
-                <div className={styles.storyHighlight}>
-                  <p>
-                    &ldquo;We don&apos;t just sell spices — we honour generations of artisans who perfected the craft of cultivating the world&apos;s finest flavours.&rdquo;
-                  </p>
-                </div>
+                <p className="text-accent text-red" style={{ fontSize: "1.2rem", marginTop: "24px" }}>
+                  &ldquo;We don&apos;t just sell spices — we honour generations of artisans who perfected the craft of cultivating the world&apos;s finest flavours.&rdquo;
+                </p>
               </div>
             </AnimatedSection>
           </div>
@@ -79,43 +72,32 @@ export default function AboutPage() {
       </section>
 
       {/* ── Mission & Vision ── */}
-      <section className={styles.missionSection}>
-        <div className={styles.missionContainer}>
+      <section className={`section ${styles.missionSection}`}>
+        <div className="container">
           <AnimatedSection direction="up">
-            <div className={styles.missionHeader}>
-              <p className={styles.missionLabel}>Purpose &amp; Promise</p>
-              <h2 className={styles.missionHeaderTitle}>Mission &amp; Vision</h2>
-              <div className={styles.missionHeaderDivider} />
+            <div className="section-header">
+              <span className="subtitle">Purpose & Promise</span>
+              <h2>Mission & Vision</h2>
+              <div className="divider" />
             </div>
           </AnimatedSection>
 
           <div className={styles.missionGrid}>
-            <AnimatedSection direction="left" delay={0.1}>
+            <AnimatedSection direction="up" delay={0.1}>
               <div className={styles.missionCard}>
-                <div className={styles.missionIcon}>
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-                    <path d="M2 12h20" />
-                  </svg>
-                </div>
-                <h3 className={styles.missionCardTitle}>Our Mission</h3>
-                <p className={styles.missionCardText}>
+                <div className={styles.missionIcon}>🎯</div>
+                <h3>Our Mission</h3>
+                <p>
                   To bring the authentic taste of Ceylon to kitchens around the world, while uplifting the farming communities who nurture these extraordinary spices. We are committed to sustainable sourcing, uncompromising quality, and preserving age-old harvesting traditions.
                 </p>
               </div>
             </AnimatedSection>
 
-            <AnimatedSection direction="right" delay={0.1}>
+            <AnimatedSection direction="up" delay={0.2}>
               <div className={styles.missionCard}>
-                <div className={styles.missionIcon}>
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
-                    <circle cx="12" cy="12" r="3" />
-                  </svg>
-                </div>
-                <h3 className={styles.missionCardTitle}>Our Vision</h3>
-                <p className={styles.missionCardText}>
+                <div className={styles.missionIcon}>👁️</div>
+                <h3>Our Vision</h3>
+                <p>
                   To be recognised globally as the premier source of Ceylon spices — setting the benchmark for purity, sustainability, and flavour. We envision a world where every meal is elevated by the finest natural ingredients, ethically sourced and lovingly prepared.
                 </p>
               </div>
@@ -125,78 +107,66 @@ export default function AboutPage() {
       </section>
 
       {/* ── Values Section ── */}
-      <section className={styles.valuesSection}>
-        <div className={styles.valuesContainer}>
+      <section className={`section ${styles.valuesSection}`}>
+        <div className="container">
           <AnimatedSection direction="up">
-            <div className={styles.valuesHeader}>
-              <p className={styles.valuesLabel}>What Drives Us</p>
-              <h2 className={styles.valuesHeaderTitle}>Our Core Values</h2>
-              <div className={styles.valuesHeaderDivider} />
+            <div className="section-header">
+              <span className="subtitle">What Drives Us</span>
+              <h2>Our Core Values</h2>
+              <div className="divider" />
             </div>
           </AnimatedSection>
 
           <div className={styles.valuesGrid}>
             {/* Sustainability */}
             <AnimatedSection direction="up" delay={0}>
-              <div className={styles.valueCard}>
-                <div className={styles.valueIconWrap}>
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22c4-4 8-7.5 8-12a8 8 0 1 0-16 0c0 4.5 4 8 8 12Z" />
-                    <path d="M12 14a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                  </svg>
+              <div className={styles.valueItem}>
+                <div className={styles.valueIconWrap}>🌱</div>
+                <div className={styles.valueContent}>
+                  <h4>Sustainability</h4>
+                  <p>
+                    Earth-first practices from farm to shelf. We protect the land that gives us everything.
+                  </p>
                 </div>
-                <h4 className={styles.valueTitle}>Sustainability</h4>
-                <p className={styles.valueText}>
-                  Earth-first practices from farm to shelf. We protect the land that gives us everything.
-                </p>
               </div>
             </AnimatedSection>
 
             {/* Quality */}
-            <AnimatedSection direction="up" delay={0.15}>
-              <div className={styles.valueCard}>
-                <div className={styles.valueIconWrap}>
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
+            <AnimatedSection direction="up" delay={0.1}>
+              <div className={styles.valueItem}>
+                <div className={styles.valueIconWrap}>⭐</div>
+                <div className={styles.valueContent}>
+                  <h4>Quality</h4>
+                  <p>
+                    Uncompromising standards at every stage. Only the finest spices carry the Gammalu name.
+                  </p>
                 </div>
-                <h4 className={styles.valueTitle}>Quality</h4>
-                <p className={styles.valueText}>
-                  Uncompromising standards at every stage. Only the finest spices carry the Gammalu name.
-                </p>
               </div>
             </AnimatedSection>
 
             {/* Community */}
-            <AnimatedSection direction="up" delay={0.3}>
-              <div className={styles.valueCard}>
-                <div className={styles.valueIconWrap}>
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                    <circle cx="9" cy="7" r="4" />
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                  </svg>
+            <AnimatedSection direction="up" delay={0.2}>
+              <div className={styles.valueItem}>
+                <div className={styles.valueIconWrap}>🤝</div>
+                <div className={styles.valueContent}>
+                  <h4>Community</h4>
+                  <p>
+                    Fair partnerships with local farmers, empowering the communities behind our spices.
+                  </p>
                 </div>
-                <h4 className={styles.valueTitle}>Community</h4>
-                <p className={styles.valueText}>
-                  Fair partnerships with local farmers, empowering the communities behind our spices.
-                </p>
               </div>
             </AnimatedSection>
 
             {/* Innovation */}
-            <AnimatedSection direction="up" delay={0.45}>
-              <div className={styles.valueCard}>
-                <div className={styles.valueIconWrap}>
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
+            <AnimatedSection direction="up" delay={0.3}>
+              <div className={styles.valueItem}>
+                <div className={styles.valueIconWrap}>💡</div>
+                <div className={styles.valueContent}>
+                  <h4>Innovation</h4>
+                  <p>
+                    Blending ancient wisdom with modern technique to unlock new dimensions of flavour.
+                  </p>
                 </div>
-                <h4 className={styles.valueTitle}>Innovation</h4>
-                <p className={styles.valueText}>
-                  Blending ancient wisdom with modern technique to unlock new dimensions of flavour.
-                </p>
               </div>
             </AnimatedSection>
           </div>
@@ -204,14 +174,14 @@ export default function AboutPage() {
       </section>
 
       {/* ── Certifications Section ── */}
-      <section className={styles.certSection}>
-        <div className={styles.certContainer}>
+      <section className={`section ${styles.certSection}`}>
+        <div className="container">
           <AnimatedSection direction="up">
-            <div className={styles.certHeader}>
-              <p className={styles.certLabel}>Trust &amp; Transparency</p>
-              <h2 className={styles.certHeaderTitle}>Our Certifications</h2>
-              <div className={styles.certHeaderDivider} />
-              <p className={styles.certHeaderText}>
+            <div className="section-header">
+              <span className="subtitle">Trust & Transparency</span>
+              <h2>Our Certifications</h2>
+              <div className="divider" />
+              <p>
                 Every product is rigorously tested and certified, so you can trust what you taste.
               </p>
             </div>
@@ -219,41 +189,23 @@ export default function AboutPage() {
 
           <div className={styles.certGrid}>
             <AnimatedSection direction="scale" delay={0}>
-              <div className={styles.certCard}>
-                <div className={styles.certIconWrap}>
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22c4-4 8-7.5 8-12a8 8 0 1 0-16 0c0 4.5 4 8 8 12Z" />
-                    <path d="M12 14a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                  </svg>
-                </div>
-                <h4 className={styles.certTitle}>Organic Certified</h4>
-                <p className={styles.certText}>100% organic, free from synthetic pesticides and fertilisers.</p>
+              <div className={styles.certItem}>
+                <div className={styles.certIcon}>🍃</div>
+                <span className={styles.certName}>Organic Certified</span>
               </div>
             </AnimatedSection>
 
-            <AnimatedSection direction="scale" delay={0.15}>
-              <div className={styles.certCard}>
-                <div className={styles.certIconWrap}>
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M9 12l2 2 4-4" />
-                    <rect x="3" y="3" width="18" height="18" rx="2" />
-                  </svg>
-                </div>
-                <h4 className={styles.certTitle}>ISO 22000</h4>
-                <p className={styles.certText}>International food safety management standard compliance.</p>
+            <AnimatedSection direction="scale" delay={0.1}>
+              <div className={styles.certItem}>
+                <div className={styles.certIcon}>🛡️</div>
+                <span className={styles.certName}>ISO 22000</span>
               </div>
             </AnimatedSection>
 
-            <AnimatedSection direction="scale" delay={0.3}>
-              <div className={styles.certCard}>
-                <div className={styles.certIconWrap}>
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                    <path d="M9 12l2 2 4-4" />
-                  </svg>
-                </div>
-                <h4 className={styles.certTitle}>Fair Trade</h4>
-                <p className={styles.certText}>Ethically sourced, ensuring fair wages for farming communities.</p>
+            <AnimatedSection direction="scale" delay={0.2}>
+              <div className={styles.certItem}>
+                <div className={styles.certIcon}>⚖️</div>
+                <span className={styles.certName}>Fair Trade</span>
               </div>
             </AnimatedSection>
           </div>

@@ -8,7 +8,7 @@
 .hero {
   position: relative;
   padding: 160px 0 80px;
-  min-height: 60vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   background: var(--bg-elevated);
@@ -26,12 +26,29 @@
   z-index: 1;
 }
 
+.heroImageWrap {
+  position: absolute;
+  top: 50%;
+  right: 10vw;
+  transform: translateY(-50%);
+  width: 40vw;
+  height: 60vh;
+  max-width: 500px;
+  z-index: 2;
+}
+
+.heroImage {
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+}
+
 .heroContent {
   position: relative;
-  z-index: 2;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
+  z-index: 3;
+  width: 100%;
+  max-width: 600px;
+  margin-left: 10vw;
 }
 
 .heroLabel {
@@ -244,6 +261,16 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
+  .heroCircle {
+    width: 90vw;
+    height: 90vw;
+    right: -20vw;
+  }
+  
+  .heroImageWrap {
+    right: 5vw;
+  }
+
   .storyGrid {
     gap: 48px;
   }
@@ -253,10 +280,27 @@
   .hero {
     min-height: auto;
     padding: 140px 0 60px;
+    flex-direction: column;
   }
 
   .heroCircle {
     display: none;
+  }
+
+  .heroImageWrap {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 100%;
+    height: 30vh;
+    margin-bottom: 40px;
+  }
+
+  .heroContent {
+    margin-left: 0;
+    text-align: center;
+    padding: 0 24px;
   }
 
   .storyGrid {
