@@ -1,108 +1,75 @@
-/* ============================================
-   PRODUCTS PAGE — CSS Module
-   Gammalu Ceylon Foods | Dark Luxury Theme
-   ============================================ */
+/* ===== PRODUCTS PAGE — WHITE EDITORIAL THEME ===== */
 
-/* ---- Hero Banner ---- */
+/* ===== HERO ===== */
 .hero {
   position: relative;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 160px 0 80px;
+  background: var(--bg-secondary);
   overflow: hidden;
+  text-align: center;
 }
 
 .heroImageWrap {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+  opacity: 0.1;
   z-index: 0;
 }
 
 .heroImage {
   object-fit: cover;
-  object-position: center;
-  filter: brightness(0.45) saturate(0.8);
-  transition: transform 8s ease;
-}
-
-.hero:hover .heroImage {
-  transform: scale(1.04);
 }
 
 .heroOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(10, 10, 10, 0.45) 0%,
-    rgba(10, 10, 10, 0.6) 50%,
-    rgba(10, 10, 10, 0.92) 100%
-  );
-  z-index: 1;
+  display: none;
 }
 
 .heroContent {
   position: relative;
   z-index: 2;
-  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
   padding: 0 24px;
 }
 
 .heroSubtitle {
-  font-family: var(--font-accent);
-  font-size: 1.15rem;
-  color: var(--accent-gold);
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-red);
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-weight: 500;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .heroTitle {
-  font-family: var(--font-heading);
-  font-size: clamp(3rem, 7vw, 5.5rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.1;
   color: var(--text-primary);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .heroDivider {
-  width: 80px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent-gold), var(--accent-emerald));
+  width: 60px;
+  height: 3px;
+  background: var(--accent-red);
   margin: 0 auto 24px;
-  border-radius: 2px;
 }
 
 .heroDesc {
-  font-family: var(--font-accent);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: var(--text-secondary);
-  max-width: 580px;
-  margin: 0 auto;
-  font-style: italic;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
-/* ---- Products Section ---- */
+/* ===== PRODUCTS SECTION ===== */
 .productsSection {
-  padding: var(--section-padding) 0;
-  background-color: var(--bg-primary);
-  position: relative;
-}
-
-.productsSection::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 800px;
-  height: 800px;
-  background: radial-gradient(ellipse at center, rgba(45, 90, 61, 0.05) 0%, transparent 70%);
-  pointer-events: none;
+  padding: 80px 0 120px;
+  background: var(--bg-primary);
 }
 
 .productsContainer {
@@ -111,10 +78,9 @@
   padding: 0 24px;
 }
 
-/* ---- Filter Tabs ---- */
+/* Filter Tabs */
 .filterWrap {
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
@@ -122,232 +88,160 @@
 }
 
 .filterTab {
-  padding: 10px 24px;
   background: transparent;
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--border-medium);
+  padding: 10px 24px;
   border-radius: var(--radius-full);
   font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 500;
-  letter-spacing: 0.04em;
   color: var(--text-secondary);
   cursor: pointer;
   transition: all var(--transition-base);
-  white-space: nowrap;
 }
 
 .filterTab:hover {
-  border-color: var(--border-gold);
-  color: var(--accent-gold);
-  background: var(--accent-gold-dim);
+  border-color: var(--accent-red);
+  color: var(--accent-red);
 }
 
 .filterTabActive {
-  background: linear-gradient(135deg, var(--accent-gold), var(--accent-amber));
-  color: var(--bg-primary);
-  border-color: var(--accent-gold);
-  font-weight: 600;
-  box-shadow: var(--shadow-gold);
+  background: var(--accent-red);
+  border-color: var(--accent-red);
+  color: #ffffff;
 }
 
 .filterTabActive:hover {
-  background: linear-gradient(135deg, var(--accent-gold-light), var(--accent-gold));
-  color: var(--bg-primary);
-  border-color: var(--accent-gold-light);
+  color: #ffffff;
 }
 
-/* ---- Product Grid ---- */
+/* Product Grid */
 .productGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 36px;
+  gap: 32px;
 }
 
-/* ---- No Results ---- */
 .noResults {
   grid-column: 1 / -1;
   text-align: center;
-  padding: 80px 24px;
+  padding: 80px 0;
 }
 
 .noResultsText {
-  font-family: var(--font-accent);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: var(--text-tertiary);
-  font-style: italic;
 }
 
-/* ---- Quality Promise Section ---- */
+/* ===== PROMISE SECTION ===== */
 .promiseSection {
-  padding: var(--section-padding) 0;
-  background-color: var(--bg-secondary);
-  position: relative;
-  overflow: hidden;
-}
-
-.promiseSection::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    ellipse at 50% 50%,
-    rgba(200, 164, 94, 0.04) 0%,
-    transparent 60%
-  );
-  pointer-events: none;
+  background: var(--bg-elevated);
+  padding: 120px 0;
+  border-top: 1px solid var(--border-subtle);
 }
 
 .promiseContainer {
-  max-width: var(--container-narrow);
+  max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 24px;
-  position: relative;
-  z-index: 1;
 }
 
 .promiseContent {
   text-align: center;
+  max-width: 700px;
+  margin: 0 auto 64px;
 }
 
 .promiseLabel {
-  font-family: var(--font-accent);
-  font-size: 1rem;
-  color: var(--accent-gold);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-red);
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-weight: 500;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  display: block;
 }
 
 .promiseTitle {
-  font-family: var(--font-heading);
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--text-primary);
-  margin-bottom: 20px;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  margin-bottom: 24px;
 }
 
 .promiseDivider {
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent-gold), var(--accent-emerald));
-  margin: 0 auto 28px;
-  border-radius: 2px;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-red);
+  margin: 0 auto 24px;
 }
 
 .promiseText {
   font-size: 1.1rem;
-  color: var(--text-secondary);
-  max-width: 640px;
-  margin: 0 auto 48px;
-  line-height: 1.9;
 }
 
 .promiseGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  margin-top: 24px;
 }
 
 .promiseItem {
   text-align: center;
-  padding: 32px 20px;
   background: var(--bg-card);
+  padding: 48px 32px;
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
   transition: all var(--transition-base);
 }
 
 .promiseItem:hover {
-  border-color: var(--border-gold);
-  box-shadow: var(--shadow-gold);
   transform: translateY(-4px);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--border-medium);
 }
 
 .promiseIconWrap {
-  width: 56px;
-  height: 56px;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 24px;
+  background: var(--accent-red-dim);
   border-radius: 50%;
-  background: var(--accent-emerald-glow);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 16px;
-  color: var(--accent-emerald-light);
+  color: var(--accent-red);
 }
 
 .promiseItemTitle {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 8px;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
 }
 
 .promiseItemText {
-  font-size: 0.92rem;
-  color: var(--text-tertiary);
-  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
 }
 
-/* ---- Responsive ---- */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .productGrid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
-  }
-
-  .promiseGrid {
-    gap: 24px;
   }
 }
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 50vh;
-  }
-
-  .filterWrap {
-    gap: 8px;
-    margin-bottom: 48px;
-  }
-
-  .filterTab {
-    padding: 8px 18px;
-    font-size: 0.85rem;
-  }
-
-  .productGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    padding: 140px 0 60px;
   }
 
   .promiseGrid {
     grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .heroDesc {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    min-height: 45vh;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   .productGrid {
     grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .filterWrap {
-    gap: 6px;
-  }
-
-  .filterTab {
-    padding: 7px 14px;
-    font-size: 0.8rem;
+    max-width: 400px;
+    margin: 0 auto;
   }
 }

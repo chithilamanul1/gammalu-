@@ -1,38 +1,33 @@
+/* ===== FOOTER — WHITE EDITORIAL THEME ===== */
 .footer {
+  background: var(--bg-elevated);
+  padding-top: 2px; /* For the gradient line */
   position: relative;
-  background: var(--bg-secondary);
-  padding-top: 80px;
-  padding-bottom: 0;
+  border-top: 1px solid var(--border-subtle);
 }
 
 .gradientLine {
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0;
   right: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--accent-gold-dim),
-    var(--accent-gold),
-    var(--accent-gold-dim),
-    transparent
-  );
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-red), var(--accent-red-light));
 }
 
 .inner {
-  position: relative;
+  padding-top: 80px;
+  padding-bottom: 32px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 48px;
-  padding-bottom: 60px;
+  margin-bottom: 64px;
 }
 
-/* Brand Column */
+/* ---- Brand Column ---- */
 .brandCol {
   padding-right: 24px;
 }
@@ -41,39 +36,40 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .logoIcon {
   font-size: 2rem;
+  line-height: 1;
 }
 
 .brandName {
   font-family: var(--font-heading);
   font-size: 1.5rem;
-  font-weight: 700;
   color: var(--text-primary);
-  margin: 0;
+  margin-bottom: 2px;
 }
 
 .brandTag {
-  font-family: var(--font-accent);
+  display: block;
   font-size: 0.75rem;
-  color: var(--accent-gold);
-  letter-spacing: 0.15em;
+  color: var(--text-tertiary);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .brandDesc {
-  font-size: 0.9rem;
-  color: var(--text-tertiary);
-  line-height: 1.7;
-  margin-bottom: 24px;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  max-width: 320px;
 }
 
 .socials {
   display: flex;
-  gap: 12px;
+  gap: 16px;
 }
 
 .socialLink {
@@ -83,89 +79,90 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  background: var(--bg-card);
+  color: var(--text-primary);
   border: 1px solid var(--border-subtle);
-  color: var(--text-tertiary);
-  transition: all var(--transition-base);
+  transition: all var(--transition-fast);
 }
 
 .socialLink:hover {
-  color: var(--accent-gold);
-  border-color: var(--accent-gold);
-  background: var(--accent-gold-dim);
+  background: var(--accent-red);
+  color: #ffffff;
+  border-color: var(--accent-red);
   transform: translateY(-2px);
 }
 
-/* Link Columns */
+/* ---- Link Columns ---- */
 .colTitle {
   font-family: var(--font-body);
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 1.1rem;
   color: var(--text-primary);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
   margin-bottom: 24px;
+  font-weight: 600;
 }
 
 .linkList {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.footerLink {
-  font-size: 0.9rem;
-  color: var(--text-tertiary);
-  text-decoration: none;
-  transition: all var(--transition-fast);
-  display: inline-block;
-}
-
-.footerLink:hover {
-  color: var(--accent-gold);
-  transform: translateX(4px);
-}
-
-/* Contact Info */
-.contactInfo {
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
+.footerLink {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color var(--transition-fast), padding-left var(--transition-fast);
+}
+
+.footerLink:hover {
+  color: var(--accent-red);
+  padding-left: 4px;
+}
+
+/* ---- Contact Info ---- */
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .contactItem {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  font-size: 0.9rem;
-  color: var(--text-tertiary);
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.contactIcon {
+  font-size: 1.2rem;
 }
 
 .contactItem a {
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   transition: color var(--transition-fast);
 }
 
 .contactItem a:hover {
-  color: var(--accent-gold);
+  color: var(--accent-red);
 }
 
-.contactIcon {
-  font-size: 1rem;
-  flex-shrink: 0;
-}
-
-/* Bottom Bar */
+/* ---- Bottom Bar ---- */
 .bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 0;
+  padding-top: 32px;
   border-top: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .copyright {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--text-tertiary);
 }
 
@@ -175,41 +172,32 @@
 }
 
 .bottomLinks a {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--text-tertiary);
   transition: color var(--transition-fast);
 }
 
 .bottomLinks a:hover {
-  color: var(--accent-gold);
+  color: var(--accent-red);
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
   .grid {
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-
-  .brandCol {
-    grid-column: 1 / -1;
-    padding-right: 0;
+    row-gap: 64px;
   }
 }
 
-@media (max-width: 600px) {
-  .footer {
-    padding-top: 48px;
-  }
-
+@media (max-width: 640px) {
   .grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    row-gap: 48px;
   }
-
+  
   .bottom {
     flex-direction: column;
-    gap: 12px;
     text-align: center;
+    justify-content: center;
   }
 }

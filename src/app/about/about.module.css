@@ -1,44 +1,28 @@
-/* ============================================
-   ABOUT PAGE — CSS Module
-   Gammalu Ceylon Foods | Dark Luxury Theme
-   ============================================ */
+/* ===== ABOUT PAGE — WHITE EDITORIAL THEME ===== */
 
-/* ---- Hero Banner ---- */
+.aboutPage {
+  background: var(--bg-primary);
+}
+
+/* ===== HERO ===== */
 .hero {
   position: relative;
-  min-height: 70vh;
+  padding: 160px 0 80px;
+  min-height: 60vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  background: var(--bg-elevated);
   overflow: hidden;
 }
 
-.heroImageWrap {
+.heroCircle {
   position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-
-.heroImage {
-  object-fit: cover;
-  object-position: center;
-  filter: brightness(0.5) saturate(0.85);
-  transition: transform 8s ease;
-}
-
-.hero:hover .heroImage {
-  transform: scale(1.04);
-}
-
-.heroOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(10, 10, 10, 0.5) 0%,
-    rgba(10, 10, 10, 0.65) 50%,
-    rgba(10, 10, 10, 0.9) 100%
-  );
+  top: -20vh;
+  right: -10vw;
+  width: 60vw;
+  height: 60vw;
+  background: var(--bg-primary);
+  border-radius: 50%;
   z-index: 1;
 }
 
@@ -46,69 +30,37 @@
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 0 24px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.heroSubtitle {
-  font-family: var(--font-accent);
-  font-size: 1.15rem;
-  color: var(--accent-gold);
+.heroLabel {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-red);
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-weight: 500;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .heroTitle {
-  font-family: var(--font-heading);
-  font-size: clamp(3rem, 7vw, 5.5rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.1;
   color: var(--text-primary);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
-.heroDivider {
-  width: 80px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent-gold), var(--accent-emerald));
-  margin: 0 auto 24px;
-  border-radius: 2px;
-}
-
-.heroDesc {
-  font-family: var(--font-accent);
-  font-size: 1.3rem;
+.heroSubtitle {
+  font-size: 1.2rem;
   color: var(--text-secondary);
-  max-width: 600px;
-  margin: 0 auto;
-  font-style: italic;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
-/* ---- Story Section ---- */
+/* ===== STORY SECTION ===== */
 .storySection {
-  padding: var(--section-padding) 0;
-  background-color: var(--bg-primary);
-  position: relative;
-}
-
-.storySection::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(ellipse at center, rgba(45, 90, 61, 0.06) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.storyContainer {
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: 0 24px;
+  background: var(--bg-primary);
 }
 
 .storyGrid {
@@ -120,130 +72,31 @@
 
 .storyImageWrap {
   position: relative;
-  aspect-ratio: 4 / 5;
-  border-radius: var(--radius-lg);
+  aspect-ratio: 4/5;
+  border-radius: 0;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
 }
 
-.storyImageWrap::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border: 1px solid var(--border-gold);
-  border-radius: var(--radius-lg);
-  pointer-events: none;
-}
-
-.storyImg {
+.storyImage {
   object-fit: cover;
-  transition: transform var(--transition-slow);
 }
 
-.storyImageWrap:hover .storyImg {
-  transform: scale(1.05);
+.storyContent h2 {
+  margin-bottom: 32px;
 }
 
-.storyImageDecor {
-  position: absolute;
-  top: -16px;
-  left: -16px;
-  width: 120px;
-  height: 120px;
-  border-top: 2px solid var(--accent-gold);
-  border-left: 2px solid var(--accent-gold);
-  border-radius: var(--radius-sm) 0 0 0;
-  opacity: 0.5;
-  pointer-events: none;
-  z-index: 2;
+.storyContent p {
+  margin-bottom: 24px;
 }
 
-.storyContent {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.storyContent p:last-child {
+  margin-bottom: 0;
 }
 
-.storyLabel {
-  font-family: var(--font-accent);
-  font-size: 1rem;
-  color: var(--accent-gold);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-.storyTitle {
-  font-family: var(--font-heading);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
-  color: var(--text-primary);
-  line-height: 1.2;
-}
-
-.storyText {
-  font-size: 1.05rem;
-  color: var(--text-secondary);
-  line-height: 1.9;
-}
-
-.storyHighlight {
-  padding: 24px 28px;
-  background: var(--bg-card);
-  border-left: 3px solid var(--accent-gold);
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  margin-top: 8px;
-}
-
-.storyHighlight p {
-  font-family: var(--font-accent);
-  font-size: 1.15rem;
-  font-style: italic;
-  color: var(--text-primary);
-  line-height: 1.7;
-}
-
-/* ---- Mission & Vision Section ---- */
+/* ===== MISSION SECTION ===== */
 .missionSection {
-  padding: var(--section-padding) 0;
-  background-color: var(--bg-secondary);
-  position: relative;
-}
-
-.missionContainer {
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-.missionHeader {
-  text-align: center;
-  margin-bottom: 72px;
-}
-
-.missionLabel {
-  font-family: var(--font-accent);
-  font-size: 1rem;
-  color: var(--accent-gold);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-bottom: 12px;
-}
-
-.missionHeaderTitle {
-  font-family: var(--font-heading);
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--text-primary);
-  margin-bottom: 20px;
-}
-
-.missionHeaderDivider {
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent-gold), var(--accent-emerald));
-  margin: 0 auto;
-  border-radius: 2px;
+  background: var(--bg-secondary);
 }
 
 .missionGrid {
@@ -254,12 +107,17 @@
 
 .missionCard {
   background: var(--bg-card);
-  border: 1px solid var(--border-emerald);
-  border-radius: var(--radius-lg);
-  padding: 48px 40px;
+  padding: 64px 48px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 0;
   position: relative;
-  overflow: hidden;
   transition: all var(--transition-base);
+}
+
+.missionCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-medium);
 }
 
 .missionCard::before {
@@ -268,327 +126,164 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent-emerald), var(--accent-emerald-light));
+  height: 4px;
+  background: var(--accent-red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
 }
 
-.missionCard:hover {
-  border-color: var(--accent-emerald-light);
-  box-shadow: var(--shadow-emerald);
-  transform: translateY(-4px);
+.missionCard:hover::before {
+  transform: scaleX(1);
 }
 
 .missionIcon {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: var(--accent-emerald-glow);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 2.5rem;
   margin-bottom: 24px;
-  color: var(--accent-emerald-light);
+  display: block;
 }
 
-.missionCardTitle {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--text-primary);
+.missionCard h3 {
   margin-bottom: 16px;
+  font-size: 2rem;
 }
 
-.missionCardText {
-  font-size: 1.05rem;
-  color: var(--text-secondary);
-  line-height: 1.8;
-}
-
-/* ---- Values Section ---- */
+/* ===== VALUES GRID ===== */
 .valuesSection {
-  padding: var(--section-padding) 0;
-  background-color: var(--bg-primary);
-  position: relative;
-}
-
-.valuesContainer {
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-.valuesHeader {
-  text-align: center;
-  margin-bottom: 72px;
-}
-
-.valuesLabel {
-  font-family: var(--font-accent);
-  font-size: 1rem;
-  color: var(--accent-gold);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-bottom: 12px;
-}
-
-.valuesHeaderTitle {
-  font-family: var(--font-heading);
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--text-primary);
-  margin-bottom: 20px;
-}
-
-.valuesHeaderDivider {
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent-gold), var(--accent-emerald));
-  margin: 0 auto;
-  border-radius: 2px;
+  background: var(--bg-primary);
 }
 
 .valuesGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
-.valueCard {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: 40px 28px;
-  text-align: center;
+.valueItem {
+  background: var(--bg-elevated);
+  padding: 48px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
   transition: all var(--transition-base);
-  position: relative;
-  overflow: hidden;
+  border: 1px solid transparent;
 }
 
-.valueCard::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent-gold), var(--accent-emerald));
-  transition: width var(--transition-base);
-}
-
-.valueCard:hover {
-  border-color: var(--border-gold);
-  box-shadow: var(--shadow-gold);
-  transform: translateY(-6px);
-}
-
-.valueCard:hover::after {
-  width: 60%;
+.valueItem:hover {
+  background: var(--bg-card);
+  border-color: var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
 }
 
 .valueIconWrap {
-  width: 72px;
-  height: 72px;
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  background: var(--accent-red-dim);
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-gold-dim), transparent);
-  border: 1px solid var(--border-gold);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 24px;
-  transition: all var(--transition-base);
-  color: var(--accent-gold);
+  font-size: 1.5rem;
+  color: var(--accent-red);
 }
 
-.valueCard:hover .valueIconWrap {
-  background: var(--accent-gold-dim);
-  box-shadow: 0 0 30px rgba(200, 164, 94, 0.15);
-}
-
-.valueTitle {
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-primary);
+.valueContent h4 {
   margin-bottom: 12px;
+  font-size: 1.25rem;
 }
 
-.valueText {
+.valueContent p {
   font-size: 0.95rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
+  margin: 0;
 }
 
-/* ---- Certifications Section ---- */
+/* ===== CERTIFICATIONS ===== */
 .certSection {
-  padding: var(--section-padding) 0;
-  background-color: var(--bg-secondary);
-  position: relative;
-}
-
-.certContainer {
-  max-width: var(--container-narrow);
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-.certHeader {
+  background: var(--bg-secondary);
   text-align: center;
-  margin-bottom: 72px;
-}
-
-.certLabel {
-  font-family: var(--font-accent);
-  font-size: 1rem;
-  color: var(--accent-gold);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-bottom: 12px;
-}
-
-.certHeaderTitle {
-  font-family: var(--font-heading);
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--text-primary);
-  margin-bottom: 20px;
-}
-
-.certHeaderDivider {
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent-gold), var(--accent-emerald));
-  margin: 0 auto 16px;
-  border-radius: 2px;
-}
-
-.certHeaderText {
-  font-size: 1.05rem;
-  color: var(--text-secondary);
-  max-width: 560px;
-  margin: 0 auto;
-  line-height: 1.8;
 }
 
 .certGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  flex-wrap: wrap;
+  margin-top: 48px;
 }
 
-.certCard {
+.certItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.certIcon {
+  width: 100px;
+  height: 100px;
   background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: 36px 24px;
-  text-align: center;
-  transition: all var(--transition-base);
-}
-
-.certCard:hover {
-  border-color: var(--border-gold);
-  box-shadow: var(--shadow-gold);
-  transform: translateY(-4px);
-}
-
-.certIconWrap {
-  width: 64px;
-  height: 64px;
   border-radius: 50%;
-  background: var(--accent-emerald-glow);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 20px;
-  color: var(--accent-emerald-light);
+  font-size: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-subtle);
 }
 
-.certTitle {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
+.certName {
+  font-family: var(--font-body);
   font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 8px;
-}
-
-.certText {
   font-size: 0.9rem;
-  color: var(--text-tertiary);
-  line-height: 1.6;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-/* ---- Responsive ---- */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .storyGrid {
     gap: 48px;
-  }
-
-  .valuesGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-
-  .missionCard {
-    padding: 36px 28px;
   }
 }
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 55vh;
+    min-height: auto;
+    padding: 140px 0 60px;
+  }
+
+  .heroCircle {
+    display: none;
   }
 
   .storyGrid {
     grid-template-columns: 1fr;
-    gap: 40px;
   }
 
   .storyImageWrap {
-    aspect-ratio: 16 / 10;
-    max-height: 400px;
-  }
-
-  .storyImageDecor {
-    display: none;
+    max-width: 500px;
+    margin: 0 auto;
   }
 
   .missionGrid {
     grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .missionCard {
-    padding: 32px 24px;
-  }
-
-  .certGrid {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  .heroDesc {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    min-height: 50vh;
   }
 
   .valuesGrid {
     grid-template-columns: 1fr;
   }
 
+  .valueItem {
+    flex-direction: column;
+    padding: 32px;
+  }
+}
+
+@media (max-width: 480px) {
   .certGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .storyHighlight {
-    padding: 20px;
-  }
-
-  .valueCard {
-    padding: 32px 20px;
+    gap: 32px;
   }
 }

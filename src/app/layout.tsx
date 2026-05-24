@@ -6,19 +6,19 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Gammalu Ceylon Foods | Premium Sri Lankan Spices",
   description:
-    "Discover the finest organic spices from the heart of Ceylon. Gammalu Ceylon Foods (Pvt) Ltd exports premium cinnamon, pepper, turmeric, and exotic spice blends to the world.",
+    "Discover the finest organic Ceylon Cinnamon and Black Pepper, sourced directly from the lush plantations of Sri Lanka. Gammalu Ceylon Foods — pure, authentic, exceptional.",
   keywords: [
     "Ceylon spices",
     "Sri Lankan cinnamon",
     "organic spices",
     "premium pepper",
-    "turmeric export",
     "Gammalu Ceylon Foods",
+    "Ceylon cinnamon export",
   ],
   openGraph: {
     title: "Gammalu Ceylon Foods | Premium Sri Lankan Spices",
     description:
-      "Discover the finest organic spices from the heart of Ceylon.",
+      "Discover the finest organic Ceylon Cinnamon and Black Pepper from Sri Lanka.",
     type: "website",
     locale: "en_US",
   },
@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="grain-overlay">
+      <body>
         <Navbar />
         <main>{children}</main>
         <Footer />

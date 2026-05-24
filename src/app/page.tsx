@@ -3,14 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
-import HeroParticles from "@/components/HeroParticles";
 import SpiceCard from "@/components/SpiceCard";
 import styles from "./page.module.css";
 
 const stats = [
-  { number: "150+", label: "Years of Heritage" },
+  { number: "50+", label: "Years of Heritage" },
   { number: "45+", label: "Countries Served" },
-  { number: "30+", label: "Premium Products" },
+  { number: "2", label: "Premium Products" },
   { number: "100%", label: "Organic Certified" },
 ];
 
@@ -32,14 +31,6 @@ const featuredProducts = [
     imageSrc: "/images/pepper.png",
     imageAlt: "Premium Sri Lankan black peppercorns",
     slug: "/products/pepper",
-  },
-  {
-    name: "Organic Turmeric",
-    origin: "Sri Lanka",
-    description:
-      "Vibrant golden turmeric with high curcumin content, grown in rich volcanic soil.",
-    imageSrc: "/images/turmeric.png",
-    imageAlt: "Premium organic turmeric powder and root",
   },
 ];
 
@@ -71,6 +62,7 @@ export default function HomePage() {
     <>
       {/* ===== HERO SECTION ===== */}
       <section className={styles.hero} id="hero-section">
+        <div className={styles.heroCircle} />
         <div className={styles.heroImageWrap}>
           <Image
             src="/images/hero-spices.png"
@@ -78,37 +70,43 @@ export default function HomePage() {
             fill
             className={styles.heroImage}
             priority
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
-        <div className={styles.heroOverlay} />
-        <HeroParticles />
         <div className={`container ${styles.heroContent}`}>
-          <span className={styles.heroSubtitle}>
-            Est. 1870 · Colombo, Sri Lanka
-          </span>
-          <h1 className={styles.heroTitle}>
-            The Finest Spices
-            <br />
-            <span className={styles.heroAccent}>from the Heart of Ceylon</span>
-          </h1>
-          <p className={styles.heroDesc}>
-            Premium organic spices sourced directly from the lush plantations of
-            Sri Lanka. Discover centuries of flavor tradition, refined for the
-            modern world.
-          </p>
-          <div className={styles.heroCtas}>
-            <Link href="/products" className="btn btn-primary" id="hero-cta-explore">
-              Explore Collection
-            </Link>
-            <Link href="/about" className="btn btn-outline" id="hero-cta-story">
-              Our Story
-            </Link>
-          </div>
-          <div className={styles.scrollIndicator}>
-            <div className={styles.scrollLine} />
-            <span>Scroll to Discover</span>
-          </div>
+          <AnimatedSection direction="up" delay={0.1}>
+            <span className={styles.heroSubtitle}>
+              Premium Ceylon Spices · Sri Lanka
+            </span>
+          </AnimatedSection>
+          <AnimatedSection direction="up" delay={0.25}>
+            <h1 className={styles.heroTitle}>
+              Gammalu
+              <br />
+              <span className={styles.heroAccent}>Ceylon Foods</span>
+            </h1>
+          </AnimatedSection>
+          <AnimatedSection direction="up" delay={0.4}>
+            <p className={styles.heroDesc}>
+              The finest organic spices sourced directly from the lush
+              plantations of Sri Lanka. Discover centuries of flavor
+              tradition, refined for the modern world.
+            </p>
+          </AnimatedSection>
+          <AnimatedSection direction="up" delay={0.55}>
+            <div className={styles.heroCtas}>
+              <Link href="/products" className="btn btn-primary" id="hero-cta-explore">
+                Explore Collection
+              </Link>
+              <Link href="/about" className="btn btn-outline" id="hero-cta-story">
+                Our Story
+              </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+        <div className={styles.scrollIndicator}>
+          <div className={styles.scrollLine} />
+          <span>Scroll</span>
         </div>
       </section>
 
@@ -140,23 +138,23 @@ export default function HomePage() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
-              <div className={styles.introImageAccent} />
+              <div className={styles.introDot} />
             </AnimatedSection>
             <AnimatedSection direction="right" className={styles.introText}>
               <span className="subtitle">Our Heritage</span>
               <h2>A Legacy of Ceylon&apos;s Finest Spices</h2>
-              <div className="divider" style={{ margin: "24px 0" }} />
+              <div className="divider" style={{ margin: "24px 0", marginLeft: 0 }} />
               <p>
-                For over a century, Gammalu Ceylon Foods has been the trusted
-                custodian of Sri Lanka&apos;s most prized spice traditions. Our
-                journey began in the misty highlands of Ceylon, where ancient
-                spice gardens have flourished for generations.
+                For over half a century, Gammalu Ceylon Foods has been the
+                trusted custodian of Sri Lanka&apos;s most prized spice
+                traditions. Our journey began in the misty highlands of
+                Ceylon, where ancient spice gardens have flourished for
+                generations.
               </p>
               <p style={{ marginTop: "16px" }}>
-                Today, we bring these exceptional flavors to the world — maintaining
-                the same artisanal quality and sustainable practices that have
-                defined our family&apos;s legacy. Every product carries the essence
-                of our island&apos;s rich terroir.
+                Today, we bring these exceptional flavors to the world —
+                maintaining the same artisanal quality and sustainable
+                practices that have defined our family&apos;s legacy.
               </p>
               <Link href="/about" className="btn btn-outline" style={{ marginTop: "32px" }} id="intro-cta">
                 Discover Our Story
@@ -167,7 +165,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== FEATURED PRODUCTS ===== */}
-      <section className={`section section-dark ${styles.productsSection}`} id="featured-products-section">
+      <section className={`section ${styles.productsSection}`} id="featured-products-section">
         <div className="container">
           <AnimatedSection>
             <div className="section-header">
@@ -175,8 +173,8 @@ export default function HomePage() {
               <h2>Flagship Spices</h2>
               <div className="divider" />
               <p>
-                Hand-selected from the finest plantations, our signature products
-                represent the pinnacle of Ceylon&apos;s spice heritage.
+                Hand-selected from the finest plantations, our signature
+                products represent the pinnacle of Ceylon&apos;s spice heritage.
               </p>
             </div>
           </AnimatedSection>
@@ -206,8 +204,8 @@ export default function HomePage() {
               <h2>The Gammalu Promise</h2>
               <div className="divider" />
               <p>
-                We don&apos;t just export spices — we share a piece of Sri Lanka&apos;s
-                soul with every shipment.
+                We don&apos;t just export spices — we share a piece of Sri
+                Lanka&apos;s soul with every shipment.
               </p>
             </div>
           </AnimatedSection>
@@ -227,16 +225,7 @@ export default function HomePage() {
 
       {/* ===== CTA BANNER ===== */}
       <section className={styles.ctaBanner} id="cta-section">
-        <div className={styles.ctaBg}>
-          <Image
-            src="/images/spices-clean-white.png"
-            alt="Floating spices arrangement"
-            fill
-            className={styles.ctaBgImage}
-            sizes="100vw"
-          />
-        </div>
-        <div className={styles.ctaOverlay} />
+        <div className={styles.ctaCircle} />
         <div className={`container ${styles.ctaContent}`}>
           <AnimatedSection>
             <span className="subtitle">Partner With Us</span>
@@ -244,8 +233,9 @@ export default function HomePage() {
               Ready to Experience Ceylon&apos;s Finest?
             </h2>
             <p className={styles.ctaDesc}>
-              Whether you&apos;re a retail buyer, restaurant, or distributor — let us
-              bring the authentic taste of Sri Lanka to your business.
+              Whether you&apos;re a retail buyer, restaurant, or distributor
+              — let us bring the authentic taste of Sri Lanka to your
+              business.
             </p>
             <div className={styles.ctaButtons}>
               <Link href="/contact" className="btn btn-primary" id="cta-contact">

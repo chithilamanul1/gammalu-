@@ -9,10 +9,8 @@ const footerLinks = {
     { href: "/contact", label: "Contact" },
   ],
   products: [
-    { href: "/products", label: "Ceylon Cinnamon" },
-    { href: "/products", label: "Black Pepper" },
-    { href: "/products", label: "Turmeric" },
-    { href: "/products", label: "Cloves & Cardamom" },
+    { href: "/products/cinnamon", label: "Ceylon Cinnamon" },
+    { href: "/products/pepper", label: "Black Pepper" },
   ],
 };
 
@@ -93,11 +91,11 @@ export default function Footer() {
               </div>
               <div className={styles.contactItem}>
                 <span className={styles.contactIcon}>📧</span>
-                <a href="mailto:info@gammaluceylon.com">info@gammaluceylon.com</a>
+                <a href="mailto:info@gammalu.lk">info@gammalu.lk</a>
               </div>
               <div className={styles.contactItem}>
                 <span className={styles.contactIcon}>📞</span>
-                <a href="tel:+94112345678">+94 11 234 5678</a>
+                <a href="tel:+94750512759">+94 75 051 2759</a>
               </div>
             </div>
           </div>
