@@ -1,0 +1,353 @@
+/* ============================================
+   PRODUCTS PAGE — CSS Module
+   Gammalu Ceylon Foods | Dark Luxury Theme
+   ============================================ */
+
+/* ---- Hero Banner ---- */
+.hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.heroImageWrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.45) saturate(0.8);
+  transition: transform 8s ease;
+}
+
+.hero:hover .heroImage {
+  transform: scale(1.04);
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 10, 0.45) 0%,
+    rgba(10, 10, 10, 0.6) 50%,
+    rgba(10, 10, 10, 0.92) 100%
+  );
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.heroSubtitle {
+  font-family: var(--font-accent);
+  font-size: 1.15rem;
+  color: var(--accent-gold);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.heroTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.heroDivider {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-emerald));
+  margin: 0 auto 24px;
+  border-radius: 2px;
+}
+
+.heroDesc {
+  font-family: var(--font-accent);
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 580px;
+  margin: 0 auto;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* ---- Products Section ---- */
+.productsSection {
+  padding: var(--section-padding) 0;
+  background-color: var(--bg-primary);
+  position: relative;
+}
+
+.productsSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(ellipse at center, rgba(45, 90, 61, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.productsContainer {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---- Filter Tabs ---- */
+.filterWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 64px;
+}
+
+.filterTab {
+  padding: 10px 24px;
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+}
+
+.filterTab:hover {
+  border-color: var(--border-gold);
+  color: var(--accent-gold);
+  background: var(--accent-gold-dim);
+}
+
+.filterTabActive {
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-amber));
+  color: var(--bg-primary);
+  border-color: var(--accent-gold);
+  font-weight: 600;
+  box-shadow: var(--shadow-gold);
+}
+
+.filterTabActive:hover {
+  background: linear-gradient(135deg, var(--accent-gold-light), var(--accent-gold));
+  color: var(--bg-primary);
+  border-color: var(--accent-gold-light);
+}
+
+/* ---- Product Grid ---- */
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+
+/* ---- No Results ---- */
+.noResults {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 24px;
+}
+
+.noResultsText {
+  font-family: var(--font-accent);
+  font-size: 1.25rem;
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+/* ---- Quality Promise Section ---- */
+.promiseSection {
+  padding: var(--section-padding) 0;
+  background-color: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.promiseSection::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(200, 164, 94, 0.04) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.promiseContainer {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.promiseContent {
+  text-align: center;
+}
+
+.promiseLabel {
+  font-family: var(--font-accent);
+  font-size: 1rem;
+  color: var(--accent-gold);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.promiseTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.promiseDivider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-emerald));
+  margin: 0 auto 28px;
+  border-radius: 2px;
+}
+
+.promiseText {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin: 0 auto 48px;
+  line-height: 1.9;
+}
+
+.promiseGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.promiseItem {
+  text-align: center;
+  padding: 32px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+.promiseItem:hover {
+  border-color: var(--border-gold);
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-4px);
+}
+
+.promiseIconWrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent-emerald-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  color: var(--accent-emerald-light);
+}
+
+.promiseItemTitle {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.promiseItemText {
+  font-size: 0.92rem;
+  color: var(--text-tertiary);
+  line-height: 1.6;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .promiseGrid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 50vh;
+  }
+
+  .filterWrap {
+    gap: 8px;
+    margin-bottom: 48px;
+  }
+
+  .filterTab {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .promiseGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .heroDesc {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 45vh;
+  }
+
+  .productGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .filterWrap {
+    gap: 6px;
+  }
+
+  .filterTab {
+    padding: 7px 14px;
+    font-size: 0.8rem;
+  }
+}
