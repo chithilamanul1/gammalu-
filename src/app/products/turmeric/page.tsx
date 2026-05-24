@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
-import styles from './product-detail.module.css';
+import styles from '../product-detail.module.css';
 
 export const metadata = {
   title: 'Organic Turmeric – Gammalu Ceylon Foods',
