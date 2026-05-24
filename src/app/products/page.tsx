@@ -32,7 +32,6 @@ const categories = [
   'All',
   'Cinnamon',
   'Pepper',
-  'Turmeric',
   'Exotic Blends',
   'Whole Spices',
 ];

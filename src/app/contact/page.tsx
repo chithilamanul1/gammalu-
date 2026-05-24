@@ -175,8 +175,8 @@ export default function ContactPage() {
                     </div>
                     <div className={styles.infoText}>
                       <span className={styles.infoLabel}>Phone</span>
-                      <a href="tel:+94112345678" className={styles.infoValue}>
-                        +94 11 234 5678
+                      <a href="tel:+94750512759" className={styles.infoValue}>
+                        +94 75 051 2759
                       </a>
                     </div>
                   </div>
@@ -189,8 +189,8 @@ export default function ContactPage() {
                     </div>
                     <div className={styles.infoText}>
                       <span className={styles.infoLabel}>Email</span>
-                      <a href="mailto:info@gammaluceylon.com" className={styles.infoValue}>
-                        info@gammaluceylon.com
+                      <a href="mailto:info@gammalu.lk" className={styles.infoValue}>
+                        info@gammalu.lk
                       </a>
                     </div>
                   </div>
