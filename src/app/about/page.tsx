@@ -42,7 +42,7 @@ export default function AboutPage() {
             <AnimatedSection direction="left">
               <div className={styles.storyImageWrap}>
                 <Image
-                  src="/images/cinnamon.png"
+                  src="/images/cina3.png"
                   alt="Artisan harvesting cinnamon bark in Sri Lanka"
                   fill
                   className={styles.storyImage}

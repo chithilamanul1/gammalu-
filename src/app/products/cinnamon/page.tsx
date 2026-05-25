@@ -23,7 +23,7 @@ export default function CinnamonDetailPage() {
         {/* Left Column: Image */}
         <AnimatedSection direction="left" className={styles.imageContainer}>
           <Image
-            src="/images/cinnamon.png"
+            src="/images/cina5.png"
             alt="Premium Ceylon Cinnamon Sticks close-up"
             fill
             priority
@@ -113,7 +113,7 @@ export default function CinnamonDetailPage() {
       <section className={styles.sourcingBanner}>
         <div className={styles.sourcingBg}>
           <Image
-            src="/images/spices-dark-moody.png"
+            src="/images/cina2.png"
             alt="Spice plantation landscape overlay"
             fill
             className={styles.sourcingBgImage}

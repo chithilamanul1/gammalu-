@@ -11,7 +11,7 @@ const products = [
   {
     name: 'Ceylon Cinnamon',
     origin: 'Sri Lanka',
-    imageSrc: '/images/cinnamon.png',
+    imageSrc: '/images/cina5.png',
     description:
       "The world's finest true cinnamon, hand-harvested from the bark of Cinnamomum verum trees native to Sri Lanka.",
     category: 'Cinnamon',
@@ -20,7 +20,7 @@ const products = [
   {
     name: 'Black Pepper',
     origin: 'Sri Lanka',
-    imageSrc: '/images/pepper.png',
+    imageSrc: '/images/peper.png',
     description:
       'Bold and aromatic peppercorns, sun-dried to perfection in the highlands of Sri Lanka.',
     category: 'Pepper',
@@ -50,7 +50,7 @@ export default function ProductsPage() {
       <section className={styles.hero}>
         <div className={styles.heroImageWrap}>
           <Image
-            src="/images/hero-spices.png"
+            src="/images/cina4.png"
             alt="Curated collection of premium Ceylon spices"
             fill
             priority

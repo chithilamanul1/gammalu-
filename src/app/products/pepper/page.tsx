@@ -23,7 +23,7 @@ export default function PepperDetailPage() {
         {/* Left Column: Image */}
         <AnimatedSection direction="left" className={styles.imageContainer}>
           <Image
-            src="/images/pepper.png"
+            src="/images/peper.png"
             alt="Premium Sri Lankan Black Peppercorns close-up"
             fill
             priority
@@ -113,7 +113,7 @@ export default function PepperDetailPage() {
       <section className={styles.sourcingBanner}>
         <div className={styles.sourcingBg}>
           <Image
-            src="/images/spices-clean-white.png"
+            src="/images/cina1.png"
             alt="Spice plantation landscape overlay"
             fill
             className={styles.sourcingBgImage}

@@ -19,7 +19,7 @@ const featuredProducts = [
     origin: "Sri Lanka",
     description:
       "The world's finest true cinnamon, hand-harvested from the bark of Cinnamomum verum trees.",
-    imageSrc: "/images/cinnamon.png",
+    imageSrc: "/images/cina5.png",
     imageAlt: "Premium Ceylon cinnamon sticks",
     slug: "/products/cinnamon",
   },
@@ -28,7 +28,7 @@ const featuredProducts = [
     origin: "Sri Lanka",
     description:
       "Bold and aromatic peppercorns, sun-dried to perfection in the highlands.",
-    imageSrc: "/images/pepper.png",
+    imageSrc: "/images/peper.png",
     imageAlt: "Premium Sri Lankan black peppercorns",
     slug: "/products/pepper",
   },
@@ -65,7 +65,7 @@ export default function HomePage() {
         <div className={styles.heroCircle} />
         <div className={styles.heroImageWrap}>
           <Image
-            src="/images/hero-spices.png"
+            src="/images/cinnamon-hero.png"
             alt="Premium floating Sri Lankan spices"
             fill
             className={styles.heroImage}
@@ -131,7 +131,7 @@ export default function HomePage() {
             <AnimatedSection direction="left" className={styles.introImageWrap}>
               <div className={styles.introImageContainer}>
                 <Image
-                  src="/images/spices-dark-moody.png"
+                  src="/images/cina1.png"
                   alt="Authentic Ceylon spices"
                   fill
                   className={styles.introImage}
