@@ -84,9 +84,9 @@ const certifications = [
       <svg viewBox="0 0 100 100" fill="none" className={styles.certIconContainer} xmlns="http://www.w3.org/2000/svg">
         <path d="M50 10 C65 10, 80 18, 80 38 C80 62, 50 86, 50 86 C50 86, 20 62, 20 38 C20 18, 35 10, 50 10 Z" stroke="currentColor" strokeWidth="2" fill="none" />
         <path d="M50 15 C62 15, 75 22, 75 38 C75 58, 50 79, 50 79 C50 79, 25 58, 25 38 C25 22, 38 15, 50 15 Z" stroke="currentColor" strokeWidth="0.75" opacity="0.2" fill="none" />
-        <text x="50" y="44" fontFamily="var(--font-heading)" fontSize="15" fontWeight="700" letterSpacing="0.05em" textAnchor="middle" fill="currentColor">HACCP</text>
-        <line x1="32" y1="52" x2="68" y2="52" stroke="currentColor" strokeWidth="1.25" />
-        <text x="50" y="67" fontFamily="var(--font-body)" fontSize="8.5" fontWeight="600" letterSpacing="0.15em" textAnchor="middle" fill="currentColor">CERTIFIED</text>
+        <text x="50" y="42" fontFamily="var(--font-heading)" fontSize="14" fontWeight="700" letterSpacing="0.05em" textAnchor="middle" fill="currentColor">HACCP</text>
+        <line x1="35" y1="50" x2="65" y2="50" stroke="currentColor" strokeWidth="1.25" />
+        <text x="50" y="63" fontFamily="var(--font-body)" fontSize="8" fontWeight="600" letterSpacing="0.15em" textAnchor="middle" fill="currentColor">CERTIFIED</text>
       </svg>
     )
   }

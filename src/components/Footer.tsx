@@ -131,9 +131,9 @@ export default function Footer() {
             <div className={styles.miniCert} title="HACCP Certified">
               <svg viewBox="0 0 100 100" fill="currentColor">
                 <path d="M50 10 C65 10, 80 18, 80 38 C80 62, 50 86, 50 86 C50 86, 20 62, 20 38 C20 18, 35 10, 50 10 Z" stroke="currentColor" strokeWidth="6" fill="none" />
-                <text x="50" y="48" fontFamily="var(--font-heading)" fontSize="16" fontWeight="700" letterSpacing="0.05em" textAnchor="middle">HACCP</text>
-                <line x1="30" y1="56" x2="70" y2="56" stroke="currentColor" strokeWidth="3" />
-                <text x="50" y="72" fontFamily="var(--font-body)" fontSize="10" fontWeight="600" letterSpacing="0.15em" textAnchor="middle">CERTIFIED</text>
+                <text x="50" y="42" fontFamily="var(--font-heading)" fontSize="14" fontWeight="700" letterSpacing="0.05em" textAnchor="middle">HACCP</text>
+                <line x1="35" y1="50" x2="65" y2="50" stroke="currentColor" strokeWidth="3" />
+                <text x="50" y="63" fontFamily="var(--font-body)" fontSize="8" fontWeight="600" letterSpacing="0.15em" textAnchor="middle">CERTIFIED</text>
               </svg>
             </div>
             <div className={styles.miniCert} title="Fair Trade Certified">
