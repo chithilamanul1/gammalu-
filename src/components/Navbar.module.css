@@ -5,7 +5,8 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 9999;
+  transform: translate3d(0, 0, 0);
   transition: all var(--transition-base);
   background: var(--bg-primary);
   border-bottom: 1px solid var(--border-subtle);
@@ -79,7 +80,7 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 1001; /* Above drawer */
+  z-index: 10002; /* Above drawer */
 }
 
 .hamburger span {
@@ -111,14 +112,15 @@
   bottom: 0;
   background: var(--bg-primary);
   padding: 100px var(--space-xl) 40px; /* Space for navbar top */
-  z-index: 999;
-  transform: translateY(-100%);
+  z-index: 10000;
+  transform: translateY(-100%) translateZ(0);
   transition: transform var(--transition-base);
   overflow-y: auto;
+  will-change: transform;
 }
 
 .drawerOpen {
-  transform: translateY(0);
+  transform: translateY(0) translateZ(0);
 }
 
 .mobileLinks {
