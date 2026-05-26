@@ -1,4 +1,4 @@
-/* ===== ABOUT PAGE — WHITE EDITORIAL THEME ===== */
+/* ===== ABOUT PAGE — LUXURY ORGANIC THEME ===== */
 
 .aboutPage {
   background: var(--bg-primary);
@@ -11,8 +11,9 @@
   min-height: 80vh;
   display: flex;
   align-items: center;
-  background: var(--bg-elevated);
+  background: var(--bg-secondary);
   overflow: hidden;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .heroCircle {
@@ -23,6 +24,7 @@
   height: 60vw;
   background: var(--bg-primary);
   border-radius: 50%;
+  border: 1px solid var(--border-subtle);
   z-index: 1;
 }
 
@@ -40,7 +42,7 @@
 .heroImage {
   object-fit: contain;
   object-position: center;
-  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+  filter: drop-shadow(0 20px 40px rgba(43, 58, 47, 0.15));
 }
 
 .heroContent {
@@ -56,21 +58,22 @@
   font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--accent-red);
+  color: var(--accent-gold);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   margin-bottom: 24px;
 }
 
 .heroTitle {
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: clamp(3.5rem, 6vw, 5rem);
   line-height: 1.1;
-  color: var(--text-primary);
+  color: var(--accent-green);
   margin-bottom: 24px;
+  font-family: var(--font-heading);
 }
 
 .heroSubtitle {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: var(--text-secondary);
   line-height: 1.8;
 }
@@ -90,7 +93,7 @@
 .storyImageWrap {
   position: relative;
   aspect-ratio: 4/5;
-  border-radius: 0;
+  border-radius: var(--radius-sm);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
 }
@@ -114,6 +117,8 @@
 /* ===== MISSION SECTION ===== */
 .missionSection {
   background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .missionGrid {
@@ -123,18 +128,19 @@
 }
 
 .missionCard {
-  background: var(--bg-card);
+  background: var(--bg-primary);
   padding: 64px 48px;
   border: 1px solid var(--border-subtle);
-  border-radius: 0;
+  border-radius: var(--radius-sm);
   position: relative;
   transition: all var(--transition-base);
+  text-align: center;
 }
 
 .missionCard:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
-  border-color: var(--border-medium);
+  border-color: var(--accent-gold);
 }
 
 .missionCard::before {
@@ -144,7 +150,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: var(--accent-red);
+  background: var(--accent-gold);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--transition-base);
@@ -163,6 +169,7 @@
 .missionCard h3 {
   margin-bottom: 16px;
   font-size: 2rem;
+  color: var(--accent-green);
 }
 
 /* ===== VALUES GRID ===== */
@@ -177,18 +184,19 @@
 }
 
 .valueItem {
-  background: var(--bg-elevated);
+  background: var(--bg-secondary);
   padding: 48px;
   display: flex;
   gap: 24px;
   align-items: flex-start;
   transition: all var(--transition-base);
-  border: 1px solid transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
 }
 
 .valueItem:hover {
-  background: var(--bg-card);
-  border-color: var(--border-subtle);
+  background: var(--bg-primary);
+  border-color: var(--accent-gold);
   box-shadow: var(--shadow-sm);
   transform: translateY(-2px);
 }
@@ -197,18 +205,20 @@
   flex-shrink: 0;
   width: 64px;
   height: 64px;
-  background: var(--accent-red-dim);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  color: var(--accent-red);
+  color: var(--accent-gold);
 }
 
 .valueContent h4 {
   margin-bottom: 12px;
   font-size: 1.25rem;
+  color: var(--accent-green);
 }
 
 .valueContent p {
@@ -218,8 +228,17 @@
 
 /* ===== CERTIFICATIONS ===== */
 .certSection {
-  background: var(--bg-secondary);
+  background: var(--accent-green);
   text-align: center;
+  color: var(--text-inverse);
+}
+
+.certSection h2, .certSection p {
+  color: var(--text-inverse);
+}
+
+.certSection .subtitle {
+  color: var(--accent-gold);
 }
 
 .certGrid {
@@ -240,23 +259,22 @@
 .certIcon {
   width: 100px;
   height: 100px;
-  background: var(--bg-card);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2.5rem;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .certName {
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.9rem;
-  color: var(--text-primary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  color: var(--accent-gold);
 }
 
 /* ===== RESPONSIVE ===== */

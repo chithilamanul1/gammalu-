@@ -1,208 +1,307 @@
-/* ===== PRODUCT DETAIL PAGE — WHITE EDITORIAL THEME ===== */
+/* ===== PRODUCT DETAIL PAGE — LUXURY ORGANIC THEME ===== */
 
-.page {
+.detailContainer {
   background: var(--bg-primary);
+  min-height: 100vh;
+  padding-top: 120px;
 }
 
-/* ===== HERO ===== */
-.hero {
-  padding: 160px 0 80px;
-  background: var(--bg-secondary);
-  border-bottom: 1px solid var(--border-subtle);
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 40px var(--space-xl);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  transition: color var(--transition-base);
 }
 
-.heroGrid {
+.backBtn:hover {
+  color: var(--accent-gold);
+}
+
+/* ===== MAIN GRID ===== */
+.mainGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
+  gap: var(--space-3xl);
+  max-width: 1400px;
+  margin: 0 auto var(--space-3xl);
+  padding: 0 var(--space-xl);
 }
 
-.imageWrap {
+.imageContainer {
   position: relative;
   aspect-ratio: 4/5;
-  background: var(--bg-elevated);
-  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background: var(--bg-secondary);
 }
 
 .image {
   object-fit: cover;
 }
 
-.label {
-  display: inline-block;
-  font-family: var(--font-body);
-  font-size: 0.85rem;
+.infoWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.badgeRow {
+  display: flex;
+  gap: 12px;
+  margin-bottom: var(--space-md);
+}
+
+.categoryBadge {
+  background: var(--accent-gold-dim);
+  color: var(--accent-gold);
+  padding: 6px 12px;
+  font-size: 0.75rem;
   font-weight: 600;
-  color: var(--accent-red);
-  letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 16px;
-  background: var(--accent-red-dim);
-  padding: 6px 16px;
+  letter-spacing: 0.1em;
+  border-radius: var(--radius-full);
+}
+
+.originBadge {
+  border: 1px solid var(--border-medium);
+  color: var(--text-secondary);
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   border-radius: var(--radius-full);
 }
 
 .title {
-  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  color: var(--accent-green);
+  margin-bottom: 8px;
   line-height: 1.1;
-  margin-bottom: 24px;
-  color: var(--text-primary);
 }
 
-.divider {
-  width: 60px;
-  height: 3px;
-  background: var(--accent-red);
-  margin-bottom: 24px;
-}
-
-.desc {
-  font-size: 1.2rem;
-  color: var(--text-secondary);
-  line-height: 1.8;
-  margin-bottom: 40px;
-}
-
-.buyBtn {
+.scientificName {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--accent-gold);
+  margin-bottom: var(--space-lg);
   font-size: 1.1rem;
-  padding: 16px 40px;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xl);
+}
+
+/* Highlights Grid */
+.highlightsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.highlightCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.highlightVal {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--accent-green);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.highlightLbl {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.ctaRow {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: auto;
 }
 
 /* ===== DETAILS SECTION ===== */
 .detailsSection {
-  background: var(--bg-primary);
-  padding: 100px 0;
+  background: var(--bg-secondary);
+  padding: var(--space-3xl) var(--space-xl);
+  text-align: center;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--accent-green);
+  margin-bottom: var(--space-2xl);
 }
 
 .detailsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: var(--space-xl);
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.detailCard {
-  background: var(--bg-card);
-  padding: 40px;
-  border: 1px solid var(--border-subtle);
-  text-align: center;
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
-}
-
-.detailCard:hover {
-  transform: translateY(-4px);
+.detailCol {
+  background: var(--bg-primary);
+  padding: 48px 32px;
+  border-radius: var(--radius-sm);
   box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-base);
+}
+
+.detailCol:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-gold);
 }
 
 .detailIcon {
   font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: var(--accent-red);
   display: block;
+  margin-bottom: var(--space-md);
 }
 
-.detailTitle {
-  font-size: 1.25rem;
-  margin-bottom: 12px;
+.detailColTitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--accent-green);
+  margin-bottom: var(--space-md);
 }
 
-.detailText {
-  font-size: 0.95rem;
-  margin: 0;
+.detailColText {
+  color: var(--text-secondary);
+  line-height: 1.7;
 }
 
-/* ===== FEATURES SECTION ===== */
-.featuresSection {
-  background: var(--bg-elevated);
-  padding: 100px 0;
-}
-
-.featuresGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.featuresList {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.featureItem {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-}
-
-.featureCheck {
-  color: var(--accent-red);
-  font-size: 1.2rem;
-  margin-top: 2px;
-}
-
-.featureContent h4 {
-  font-size: 1.1rem;
-  margin-bottom: 8px;
-}
-
-.featureContent p {
-  font-size: 0.95rem;
-  margin: 0;
-}
-
-.featuresImageWrap {
+/* ===== SOURCING BANNER ===== */
+.sourcingBanner {
   position: relative;
-  aspect-ratio: 1;
-  background: var(--bg-card);
-  box-shadow: var(--shadow-md);
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3xl) var(--space-xl);
+  overflow: hidden;
+  text-align: center;
 }
 
-.featuresImage {
+.sourcingBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.sourcingBgImage {
   object-fit: cover;
+  object-position: center;
+}
+
+.sourcingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 28, 25, 0.85); /* Very dark green-grey overlay */
+  z-index: 2;
+}
+
+.sourcingContent {
+  position: relative;
+  z-index: 3;
+  max-width: 800px;
+  color: var(--text-inverse);
+}
+
+.sourcingSubtitle {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+}
+
+.sourcingTitle {
+  color: var(--text-inverse);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  margin-bottom: var(--space-lg);
+}
+
+.sourcingText {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: var(--space-xl);
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
-  .heroGrid, .featuresGrid {
-    gap: 48px;
+  .mainGrid {
+    gap: 40px;
   }
 }
 
 @media (max-width: 768px) {
-  .hero {
-    padding: 120px 0 60px;
+  .detailContainer {
+    padding-top: 100px;
   }
 
-  .heroGrid {
+  .backBtn {
+    margin-left: 24px;
+    margin-bottom: 24px;
+  }
+
+  .mainGrid {
     grid-template-columns: 1fr;
+    gap: 32px;
   }
 
-  .imageWrap {
+  .imageContainer {
     max-width: 500px;
     margin: 0 auto;
     width: 100%;
   }
 
-  .heroContent {
-    text-align: center;
+  .highlightsGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
-  .divider {
-    margin: 0 auto 24px;
+  .ctaRow {
+    flex-direction: column;
   }
 
   .detailsGrid {
     grid-template-columns: 1fr;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .featuresGrid {
-    grid-template-columns: 1fr;
-    gap: 48px;
   }
 }
