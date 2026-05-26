@@ -6,7 +6,6 @@
   left: 0;
   right: 0;
   z-index: 9999;
-  transform: translate3d(0, 0, 0);
   transition: all var(--transition-base);
   background: var(--bg-primary);
   border-bottom: 1px solid var(--border-subtle);
