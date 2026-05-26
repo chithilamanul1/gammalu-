@@ -111,11 +111,52 @@ export default function PepperDetailPage() {
         </div>
       </section>
 
+      {/* Visual Journey Section */}
+      <section className={styles.journeySection}>
+        <div className="container">
+          <div className={styles.journeyGrid}>
+            <AnimatedSection direction="left" className={styles.journeyText}>
+              <span className="subtitle">From Farm to Seasoning</span>
+              <h2>The Pungent Masterpiece</h2>
+              <div className="divider" style={{ margin: "24px 0", marginLeft: 0 }} />
+              <p>
+                Harvested by hand in the volcanic soils of Matale and Kandy, our black pepper berries are picked at peak maturity when they are lush and green. They are then blanched and naturally sun-dried, transforming into deeply textured black peppercorns.
+              </p>
+              <p style={{ marginTop: "16px" }}>
+                Our pepper retains maximum essential oils, delivering a rich, hot pungency with unique floral and citrus notes. Excellent as a finishing spice to elevate steaks, fresh fish, pasta, and gourmet dressings.
+              </p>
+            </AnimatedSection>
+            <AnimatedSection direction="right" className={styles.journeyImages}>
+              <div className={styles.journeyImgItem}>
+                <Image
+                  src="/images/pexels-hatdieubaokhanh-com-2155729267-36292685.jpg.jpeg"
+                  alt="Fresh green pepper spikes on vine"
+                  width={300}
+                  height={220}
+                  className={styles.journeyImage}
+                />
+                <span className={styles.journeyImgCap}>Fresh Pepper Spikes</span>
+              </div>
+              <div className={styles.journeyImgItem}>
+                <Image
+                  src="/images/pexels-vignesh-vinod-174848166-16238699.jpg.jpeg"
+                  alt="Harvested raw green pepper berries"
+                  width={300}
+                  height={220}
+                  className={styles.journeyImage}
+                />
+                <span className={styles.journeyImgCap}>Sun-Drying Process</span>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* Sourcing & Sustainability Banner */}
       <section className={styles.sourcingBanner}>
         <div className={styles.sourcingBg}>
           <Image
-            src="/images/cina1.png"
+            src="/images/pexels-ravikant-35459274.jpg.jpeg"
             alt="Spice plantation landscape overlay"
             fill
             className={styles.sourcingBgImage}

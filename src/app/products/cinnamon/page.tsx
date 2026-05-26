@@ -111,6 +111,47 @@ export default function CinnamonDetailPage() {
         </div>
       </section>
 
+      {/* Visual Journey Section */}
+      <section className={styles.journeySection}>
+        <div className="container">
+          <div className={styles.journeyGrid}>
+            <AnimatedSection direction="left" className={styles.journeyText}>
+              <span className="subtitle">From Plantation to Table</span>
+              <h2>A Sensory Masterpiece</h2>
+              <div className="divider" style={{ margin: "24px 0", marginLeft: 0 }} />
+              <p>
+                Our Ceylon Cinnamon undergoes a meticulous handcrafting process. Skilled artisans peel the inner bark of the Cinnamomum Zeylanicum tree to form thin, multi-layered quills, which are then naturally sun-dried. 
+              </p>
+              <p style={{ marginTop: "16px" }}>
+                Whether freshly ground into fine powder for gourmet baking, steeped in hot morning tea, or infused into sophisticated desserts, true cinnamon brings a delicate, sweet warmth that cannot be replicated.
+              </p>
+            </AnimatedSection>
+            <AnimatedSection direction="right" className={styles.journeyImages}>
+              <div className={styles.journeyImgItem}>
+                <Image
+                  src="/images/cina3.png"
+                  alt="Traditional cinnamon quill peeling"
+                  width={300}
+                  height={220}
+                  className={styles.journeyImage}
+                />
+                <span className={styles.journeyImgCap}>Handcrafted Quills</span>
+              </div>
+              <div className={styles.journeyImgItem}>
+                <Image
+                  src="/images/Cinnamon Toast.png"
+                  alt="Culinary application of cinnamon toast"
+                  width={300}
+                  height={220}
+                  className={styles.journeyImage}
+                />
+                <span className={styles.journeyImgCap}>Gourmet Culinary Use</span>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* Sourcing & Sustainability Banner */}
       <section className={styles.sourcingBanner}>
         <div className={styles.sourcingBg}>
