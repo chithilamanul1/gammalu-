@@ -228,53 +228,85 @@
 
 /* ===== CERTIFICATIONS ===== */
 .certSection {
-  background: var(--accent-green);
+  background: var(--bg-secondary);
   text-align: center;
-  color: var(--text-inverse);
+  color: var(--text-primary);
+  border-top: 1px solid var(--border-subtle);
 }
 
 .certSection h2, .certSection p {
-  color: var(--text-inverse);
+  color: var(--text-primary);
 }
 
 .certSection .subtitle {
-  color: var(--accent-gold);
+  color: var(--accent-red);
 }
 
 .certGrid {
-  display: flex;
-  justify-content: center;
-  gap: 64px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-xl);
   margin-top: 48px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.certItem {
+.certCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  padding: 48px 32px;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  transition: all var(--transition-slow);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  height: 100%;
 }
 
-.certIcon {
-  width: 100px;
-  height: 100px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+.certCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-red);
 }
 
-.certName {
-  font-family: var(--font-body);
+.certIconContainer {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 24px;
+  color: var(--accent-red);
+  transition: transform var(--transition-base);
+}
+
+.certCard:hover .certIconContainer {
+  transform: scale(1.05);
+}
+
+.certCardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
   font-weight: 600;
-  font-size: 0.9rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.certCardSubtitle {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--accent-gold);
+  letter-spacing: 0.1em;
+  color: var(--accent-red);
+  margin-bottom: 16px;
+}
+
+.certCardDesc {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* ===== RESPONSIVE ===== */

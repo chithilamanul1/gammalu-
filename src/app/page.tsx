@@ -27,6 +27,71 @@ const featuredProducts = [
   },
 ];
 
+const certifications = [
+  {
+    name: "USDA Organic",
+    subtitle: "Organic Certified",
+    description: "Certified organic farming practices, free from synthetic chemicals and pesticides.",
+    icon: (
+      <svg viewBox="0 0 100 100" fill="none" className={styles.certIconContainer} xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="46" stroke="currentColor" strokeWidth="2" />
+        <circle cx="50" cy="50" r="41" stroke="currentColor" strokeWidth="0.75" strokeDasharray="3 3" />
+        <text x="50" y="42" fontFamily="var(--font-heading)" fontSize="13" fontWeight="700" letterSpacing="0.05em" textAnchor="middle" fill="currentColor">USDA</text>
+        <line x1="25" y1="49" x2="75" y2="49" stroke="currentColor" strokeWidth="1.25" />
+        <text x="50" y="65" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" letterSpacing="0.15em" textAnchor="middle" fill="currentColor">ORGANIC</text>
+        <path d="M44 74 C44 74, 46 71, 50 71 C54 71, 56 74, 56 74 C56 74, 52 76, 50 76 C48 76, 44 74, 44 74 Z" fill="currentColor" opacity="0.7" />
+      </svg>
+    )
+  },
+  {
+    name: "ISO 22000",
+    subtitle: "Food Safety System",
+    description: "Strict safety management systems from harvesting to packaging, meeting global export guidelines.",
+    icon: (
+      <svg viewBox="0 0 100 100" fill="none" className={styles.certIconContainer} xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="46" stroke="currentColor" strokeWidth="2" />
+        <circle cx="50" cy="50" r="38" stroke="currentColor" strokeWidth="0.75" opacity="0.15" />
+        <path d="M14 50 H86" stroke="currentColor" strokeWidth="0.75" opacity="0.15" />
+        <path d="M50 14 V86" stroke="currentColor" strokeWidth="0.75" opacity="0.15" />
+        <path d="M22 32 C30 36, 70 36, 78 32" stroke="currentColor" strokeWidth="0.75" opacity="0.15" fill="none" />
+        <path d="M22 68 C30 64, 70 64, 78 68" stroke="currentColor" strokeWidth="0.75" opacity="0.15" fill="none" />
+        <text x="50" y="40" fontFamily="var(--font-heading)" fontSize="17" fontWeight="700" letterSpacing="0.05em" textAnchor="middle" fill="currentColor">ISO</text>
+        <text x="50" y="58" fontFamily="var(--font-heading)" fontSize="13" fontWeight="600" letterSpacing="0.05em" textAnchor="middle" fill="currentColor">22000</text>
+        <text x="50" y="72" fontFamily="var(--font-body)" fontSize="6.5" fontWeight="600" letterSpacing="0.12em" textAnchor="middle" fill="currentColor">FOOD SAFETY</text>
+      </svg>
+    )
+  },
+  {
+    name: "GMP Certified",
+    subtitle: "Quality Assurance",
+    description: "Consistent quality control, hygienic handling, and operational excellence at all stages.",
+    icon: (
+      <svg viewBox="0 0 100 100" fill="none" className={styles.certIconContainer} xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="46" stroke="currentColor" strokeWidth="2" />
+        <circle cx="50" cy="50" r="41" stroke="currentColor" strokeWidth="0.75" opacity="0.2" />
+        <path d="M50 17 L52.5 22 L57.5 22 L53.5 25 L55 30 L50 27 L45 30 L46.5 25 L42.5 22 L47.5 22 Z" fill="currentColor" />
+        <text x="50" y="51" fontFamily="var(--font-heading)" fontSize="19" fontWeight="700" letterSpacing="0.05em" textAnchor="middle" fill="currentColor">GMP</text>
+        <text x="50" y="67" fontFamily="var(--font-body)" fontSize="8" fontWeight="600" letterSpacing="0.15em" textAnchor="middle" fill="currentColor">CERTIFIED</text>
+        <text x="50" y="78" fontFamily="var(--font-body)" fontSize="6" fontWeight="500" letterSpacing="0.08em" textAnchor="middle" fill="currentColor" opacity="0.8">EXCELLENT QUALITY</text>
+      </svg>
+    )
+  },
+  {
+    name: "HACCP Certified",
+    subtitle: "Hazard Prevention",
+    description: "Systematic prevention of biological, chemical, and physical hazards in food safety processing.",
+    icon: (
+      <svg viewBox="0 0 100 100" fill="none" className={styles.certIconContainer} xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 10 C65 10, 80 18, 80 38 C80 62, 50 86, 50 86 C50 86, 20 62, 20 38 C20 18, 35 10, 50 10 Z" stroke="currentColor" strokeWidth="2" fill="none" />
+        <path d="M50 15 C62 15, 75 22, 75 38 C75 58, 50 79, 50 79 C50 79, 25 58, 25 38 C25 22, 38 15, 50 15 Z" stroke="currentColor" strokeWidth="0.75" opacity="0.2" fill="none" />
+        <text x="50" y="44" fontFamily="var(--font-heading)" fontSize="15" fontWeight="700" letterSpacing="0.05em" textAnchor="middle" fill="currentColor">HACCP</text>
+        <line x1="32" y1="52" x2="68" y2="52" stroke="currentColor" strokeWidth="1.25" />
+        <text x="50" y="67" fontFamily="var(--font-body)" fontSize="8.5" fontWeight="600" letterSpacing="0.15em" textAnchor="middle" fill="currentColor">CERTIFIED</text>
+      </svg>
+    )
+  }
+];
+
 const values = [
   {
     icon: "⭐",
@@ -220,11 +285,14 @@ export default function HomePage() {
             </div>
           </AnimatedSection>
 
-          <div style={{ display: "flex", justifyContent: "center", gap: "40px", flexWrap: "wrap", marginTop: "40px" }}>
-            {["GMP", "HACCP", "ISO 22000", "USDA Organic"].map((cert, i) => (
-              <AnimatedSection key={cert} direction="scale" delay={i * 0.1}>
-                <div style={{ padding: "20px 40px", background: "var(--bg-elevated)", borderRadius: "var(--radius-full)", fontWeight: "600", fontSize: "1.1rem", border: "1px solid var(--border-subtle)" }}>
-                  {cert}
+          <div className={styles.certGrid}>
+            {certifications.map((cert, i) => (
+              <AnimatedSection key={cert.name} direction="scale" delay={i * 0.1}>
+                <div className={styles.certCard}>
+                  {cert.icon}
+                  <h4 className={styles.certCardTitle}>{cert.name}</h4>
+                  <span className={styles.certCardSubtitle}>{cert.subtitle}</span>
+                  <p className={styles.certCardDesc}>{cert.description}</p>
                 </div>
               </AnimatedSection>
             ))}

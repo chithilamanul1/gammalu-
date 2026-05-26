@@ -373,3 +373,69 @@
     flex-direction: column;
   }
 }
+
+/* ===== CERTIFICATIONS / QUALITY SECTION ===== */
+.certGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-xl);
+  margin-top: 48px;
+}
+
+.certCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  padding: 48px 32px;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  transition: all var(--transition-slow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.certCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-red);
+}
+
+.certIconContainer {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 24px;
+  color: var(--accent-red);
+  transition: transform var(--transition-base);
+}
+
+.certCard:hover .certIconContainer {
+  transform: scale(1.05);
+}
+
+.certCardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.certCardSubtitle {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-red);
+  margin-bottom: 16px;
+}
+
+.certCardDesc {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+

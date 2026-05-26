@@ -9,27 +9,32 @@
 :root {
   /* ===== LUXURY COLOR PALETTE ===== */
   /* Backgrounds */
-  --bg-primary: #FFFFFF;        /* Pure white */
-  --bg-secondary: #F7F5F0;      /* Warm off-white/cream */
-  --bg-elevated: #FFFFFF;
-  --bg-card: #FFFFFF;
+  --bg-primary: #FCFAF6;        /* Premium warm cream white */
+  --bg-secondary: #F4EFE6;      /* Rich warm cream/sand */
+  --bg-elevated: #FFFFFF;       /* Pure white for elevation */
+  --bg-card: #FFFFFF;           /* Card background */
 
   /* Accents */
-  --accent-gold: #B8860B;       /* Rich Gold */
-  --accent-gold-dim: rgba(184, 134, 11, 0.1);
-  --accent-green: #2B3A2F;      /* Deep Forest Green */
-  --accent-green-dim: rgba(43, 58, 47, 0.05);
+  --accent-red: #8B1E0F;        /* Premium Dark Red */
+  --accent-red-dim: rgba(139, 30, 15, 0.05);
+  --accent-red-light: #A7281A;  /* Lighter dark red for hover */
+
+  /* Map old variables for clean backward compatibility and global styles */
+  --accent-gold: var(--accent-red);
+  --accent-gold-dim: var(--accent-red-dim);
+  --accent-green: #1C1917;      /* Warm Charcoal for logo and headings */
+  --accent-green-dim: rgba(28, 25, 23, 0.05);
 
   /* Typography Colors */
-  --text-primary: #1A1C19;      /* Very dark green-grey */
-  --text-secondary: #5C635A;    /* Medium grey */
-  --text-tertiary: #8C938A;     /* Light grey */
+  --text-primary: #1C1917;      /* Warm Charcoal */
+  --text-secondary: #55504C;    /* Warm grey */
+  --text-tertiary: #8C8680;     /* Muted grey */
   --text-inverse: #FFFFFF;      /* White text */
 
   /* Borders */
   --border-subtle: #E8E6E1;     /* Very light warm grey */
   --border-medium: #D4D0C5;
-  --border-focus: var(--accent-gold);
+  --border-focus: var(--accent-red);
 
   /* ===== TYPOGRAPHY ===== */
   --font-heading: 'Cinzel', serif;   /* Classic, premium serif */
@@ -177,12 +182,12 @@ a:hover {
 }
 
 .btn-primary {
-  background-color: var(--accent-green);
+  background-color: var(--accent-red);
   color: var(--text-inverse);
 }
 
 .btn-primary:hover {
-  background-color: #1A241C;
+  background-color: var(--accent-red-light);
   color: var(--text-inverse);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
@@ -190,13 +195,14 @@ a:hover {
 
 .btn-outline {
   background-color: transparent;
-  color: var(--accent-green);
+  color: var(--accent-red);
   border-color: var(--border-medium);
 }
 
 .btn-outline:hover {
-  border-color: var(--accent-green);
-  background-color: var(--accent-green-dim);
+  border-color: var(--accent-red);
+  background-color: var(--accent-red-dim);
+  color: var(--accent-red);
   transform: translateY(-2px);
 }
 
