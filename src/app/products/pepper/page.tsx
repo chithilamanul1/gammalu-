@@ -24,7 +24,7 @@ export default function PepperDetailPage() {
         <AnimatedSection direction="left" className={styles.imageContainer}>
           <Image
             src="/images/peper.png"
-            alt="Premium Sri Lankan Black Peppercorns close-up"
+            alt="Premium Sri Lankan Black Peppercorns"
             fill
             priority
             className={styles.image}
@@ -35,39 +35,36 @@ export default function PepperDetailPage() {
         {/* Right Column: Info */}
         <AnimatedSection direction="right" className={styles.infoWrap}>
           <div className={styles.badgeRow}>
-            <span className={styles.categoryBadge}>Pepper</span>
-            <span className={styles.originBadge}>High-Grown Ceylon</span>
+            <span className={styles.categoryBadge}>Black Pepper</span>
+            <span className={styles.originBadge}>King of the Spices</span>
           </div>
 
           <h1 className={styles.title}>Ceylon Black Pepper</h1>
-          <p className={styles.scientificName}>Piper nigrum (King of Spices)</p>
+          <p className={styles.scientificName}>Piper nigrum</p>
 
           <p className={styles.description}>
-            Ceylon Black Pepper is celebrated globally for its high piperine content, giving it a characteristic intense heat, deep pungency, and citrusy aroma. Grown in the mid-country and highland spice gardens of Sri Lanka, our peppercorns are hand-harvested when fully mature, sun-dried on clean bamboo mats, and graded to deliver premium quality, high-density pepper grains.
+            Pepper is the most widely used spice in the world and known as the &quot;King of the Spices&quot;. Ceylon Black Pepper is a premium spice from Sri Lanka, prized worldwide for its high piperine content, rich aroma, and distinct floral-citrus notes. Cultivated mainly in Matale, Kandy, Kegalle, and Kurunegala, it commands a premium price in global markets due to its unique terroir and exceptional quality.
           </p>
 
           {/* Highlights / Stats */}
           <div className={styles.highlightsGrid}>
             <div className={styles.highlightCard}>
-              <span className={styles.highlightVal}>&gt; 6.5%</span>
+              <span className={styles.highlightVal}>High</span>
               <span className={styles.highlightLbl}>Piperine Content</span>
             </div>
             <div className={styles.highlightCard}>
-              <span className={styles.highlightVal}>550 g/l</span>
-              <span className={styles.highlightLbl}>Minimum Density</span>
+              <span className={styles.highlightVal}>Premium</span>
+              <span className={styles.highlightLbl}>Quality Status</span>
             </div>
             <div className={styles.highlightCard}>
               <span className={styles.highlightVal}>100%</span>
-              <span className={styles.highlightLbl}>Sun Dried</span>
+              <span className={styles.highlightLbl}>Authentic Origin</span>
             </div>
           </div>
 
           <div className={styles.ctaRow}>
-            <Link href="/contact?subject=Pepper Inquiry" className="btn btn-primary" id="pepper-cta-quote">
+            <Link href="/contact?subject=Black Pepper Inquiry" className="btn btn-primary" id="pepper-cta-quote">
               Request B2B Quote
-            </Link>
-            <Link href="/contact" className="btn btn-outline" id="pepper-cta-sample">
-              Request Sample
             </Link>
           </div>
         </AnimatedSection>
@@ -76,35 +73,40 @@ export default function PepperDetailPage() {
       {/* Product Details Columns */}
       <section className={styles.detailsSection}>
         <AnimatedSection direction="up">
-          <h2 className={styles.sectionTitle}>Product Characteristics</h2>
+          <h2 className={styles.sectionTitle}>Characteristics</h2>
         </AnimatedSection>
 
         <div className={styles.detailsGrid}>
           {/* Column 1 */}
           <AnimatedSection direction="up" delay={0.1} className={styles.detailCol}>
-            <span className={styles.detailIcon}>🔥</span>
-            <h3 className={styles.detailColTitle}>Aroma & Heat</h3>
-            <p className={styles.detailColText}>
-              Extremely pungent and complex. Starts with a rich woody and pine aroma, followed by notes of citrus and lime, finishing with a deep, lingering, clean peppery heat.
-            </p>
+            <span className={styles.detailIcon}>🌿</span>
+            <h3 className={styles.detailColTitle}>Origin & Cultivation</h3>
+            <div style={{ textAlign: "left", fontSize: "0.95rem" }}>
+              <p style={{ marginBottom: "8px" }}><strong>Botanical name:</strong> Piper nigrum</p>
+              <p style={{ marginBottom: "8px" }}><strong>Growing method:</strong> Often intercropped with coconut and tea plantations, using live or dead supports.</p>
+              <p><strong>Harvesting process:</strong> Berries are picked green and slightly immature, blanched, and sun-dried, resulting in a deep black color and high essential oil content.</p>
+            </div>
           </AnimatedSection>
 
           {/* Column 2 */}
           <AnimatedSection direction="up" delay={0.2} className={styles.detailCol}>
-            <span className={styles.detailIcon}>🌟</span>
-            <h3 className={styles.detailColTitle}>High Piperine Advantage</h3>
-            <p className={styles.detailColText}>
-              Ceylon Pepper has nearly twice the piperine level of general origin pepper. Piperine enhances nutrient absorption, aids digestion, and serves as a powerful antioxidant.
-            </p>
+            <span className={styles.detailIcon}>✨</span>
+            <h3 className={styles.detailColTitle}>Flavor Profile</h3>
+            <div style={{ textAlign: "left", fontSize: "0.95rem" }}>
+              <p style={{ marginBottom: "8px" }}><strong>Taste:</strong> Strong pungency with richly aromatic floral and citrus notes.</p>
+              <p><strong>Aroma:</strong> Intensely fragrant, making it ideal for seasoning and finishing dishes.</p>
+            </div>
           </AnimatedSection>
 
           {/* Column 3 */}
           <AnimatedSection direction="up" delay={0.3} className={styles.detailCol}>
-            <span className={styles.detailIcon}>📦</span>
-            <h3 className={styles.detailColTitle}>Packaging & Grades</h3>
-            <p className={styles.detailColText}>
-              Offered as Grade 1 Whole Black Peppercorns (FAQ/ASTA standard), light berries, cracked pepper, and ground powder. Packed in vacuum sealed multi-ply kraft bags.
-            </p>
+            <span className={styles.detailIcon}>🩺</span>
+            <h3 className={styles.detailColTitle}>Health Benefits</h3>
+            <div style={{ textAlign: "left", fontSize: "0.95rem" }}>
+              <p style={{ marginBottom: "8px" }}><strong>Ayurvedic properties:</strong> Warming spice that aids digestion, appetite, and decongestion.</p>
+              <p style={{ marginBottom: "8px" }}><strong>Bioavailability booster:</strong> Piperine enhances absorption of nutrients like selenium, beta-carotene, curcumin, and vitamins A & C.</p>
+              <p><strong>Traditional medicine:</strong> Used in Ayurveda and Chinese medicine to treat colds, arthritis, digestive issues, and respiratory ailments.</p>
+            </div>
           </AnimatedSection>
         </div>
       </section>
@@ -123,10 +125,10 @@ export default function PepperDetailPage() {
         <div className={styles.sourcingOverlay} />
         <div className={styles.sourcingContent}>
           <AnimatedSection direction="up">
-            <span className={styles.sourcingSubtitle}>Direct Sourcing</span>
-            <h2 className={styles.sourcingTitle}>Empowering Smallholder Farmers</h2>
+            <span className={styles.sourcingSubtitle}>Global Demand & Exports</span>
+            <h2 className={styles.sourcingTitle}>Premium Status Worldwide</h2>
             <p className={styles.sourcingText}>
-              Our peppercorns are grown in traditional home gardens, known locally as &quot;Kandyan Forest Gardens.&quot; These biodiverse, organic ecosystems require no artificial irrigation. We buy directly from smallholder farming families, paying premium rates above the market price to support sustainable farming practices and rural communities.
+              Favored for its high piperine content and unique terroir, our Ceylon Black Pepper is highly sought after. It commands higher prices compared to other varieties due to its exceptional quality and origin authenticity. Perfect for seasoning, finishing spice, and various food industry applications like spice blends and marinades.
             </p>
             <Link href="/about" className="btn btn-outline" id="pepper-about-cta">
               Read Our Sourcing Story

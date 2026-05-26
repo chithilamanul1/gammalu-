@@ -6,28 +6,21 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SpiceCard from "@/components/SpiceCard";
 import styles from "./page.module.css";
 
-const stats = [
-  { number: "50+", label: "Years of Heritage" },
-  { number: "45+", label: "Countries Served" },
-  { number: "2", label: "Premium Products" },
-  { number: "100%", label: "Organic Certified" },
-];
-
 const featuredProducts = [
   {
     name: "Ceylon Cinnamon",
     origin: "Sri Lanka",
     description:
-      "The world's finest true cinnamon, hand-harvested from the bark of Cinnamomum verum trees.",
+      "Pure Ceylon Cinnamon – True Taste of Sri Lanka. The world's finest and most authentic cinnamon, distinct from Cassia.",
     imageSrc: "/images/cina5.png",
     imageAlt: "Premium Ceylon cinnamon sticks",
     slug: "/products/cinnamon",
   },
   {
-    name: "Black Pepper",
+    name: "Ceylon Black Pepper",
     origin: "Sri Lanka",
     description:
-      "Bold and aromatic peppercorns, sun-dried to perfection in the highlands.",
+      "Known as the \"King of the Spices\", prized worldwide for its high piperine content, rich aroma, and distinct floral-citrus notes.",
     imageSrc: "/images/peper.png",
     imageAlt: "Premium Sri Lankan black peppercorns",
     slug: "/products/pepper",
@@ -36,24 +29,24 @@ const featuredProducts = [
 
 const values = [
   {
-    icon: "🌱",
-    title: "100% Organic",
-    description: "Certified organic farming practices, free from synthetic chemicals and pesticides.",
+    icon: "⭐",
+    title: "Uncompromising Quality",
+    description: "We believe true value lies in purity and authenticity. Every batch of Ceylon cinnamon and black pepper we supply is carefully selected, processed, and tested to meet the highest standards.",
+  },
+  {
+    icon: "🏛️",
+    title: "Heritage & Authenticity",
+    description: "Our products are not just commodities — they are cultural treasures. We honor centuries-old traditions while ensuring modern quality assurance.",
   },
   {
     icon: "🤝",
-    title: "Fair Trade",
-    description: "Direct partnerships with local farmers ensuring fair wages and sustainable livelihoods.",
+    title: "Customer Trust",
+    description: "Our promise is reliability. By prioritizing quality over mass production, we build lasting relationships with clients who value premium standards.",
   },
   {
-    icon: "✨",
-    title: "Premium Quality",
-    description: "Rigorous quality control from plantation to packaging, meeting global export standards.",
-  },
-  {
-    icon: "🌍",
-    title: "Direct Source",
-    description: "Farm-to-table supply chain eliminating middlemen for the freshest, purest spices.",
+    icon: "🏆",
+    title: "Excellence Over Expansion",
+    description: "Unlike companies chasing volume, we focus on delivering fewer but superior products — because excellence is our measure of success.",
   },
 ];
 
@@ -88,9 +81,7 @@ export default function HomePage() {
           </AnimatedSection>
           <AnimatedSection direction="up" delay={0.4}>
             <p className={styles.heroDesc}>
-              The finest organic spices sourced directly from the lush
-              plantations of Sri Lanka. Discover centuries of flavor
-              tradition, refined for the modern world.
+              At Gammalu Ceylon Foods, we bring the world the finest treasures of Sri Lanka — premium Ceylon cinnamon and handpicked black pepper.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="up" delay={0.55}>
@@ -107,20 +98,6 @@ export default function HomePage() {
         <div className={styles.scrollIndicator}>
           <div className={styles.scrollLine} />
           <span>Scroll</span>
-        </div>
-      </section>
-
-      {/* ===== STATS BAR ===== */}
-      <section className={styles.statsBar} id="stats-section">
-        <div className={`container ${styles.statsGrid}`}>
-          {stats.map((stat, i) => (
-            <AnimatedSection key={stat.label} delay={i * 0.1}>
-              <div className={styles.statItem}>
-                <span className={styles.statNumber}>{stat.number}</span>
-                <span className={styles.statLabel}>{stat.label}</span>
-              </div>
-            </AnimatedSection>
-          ))}
         </div>
       </section>
 
@@ -141,20 +118,17 @@ export default function HomePage() {
               <div className={styles.introDot} />
             </AnimatedSection>
             <AnimatedSection direction="right" className={styles.introText}>
-              <span className="subtitle">Our Heritage</span>
-              <h2>A Legacy of Ceylon&apos;s Finest Spices</h2>
+              <span className="subtitle">Brand Introduction</span>
+              <h2>Custodians of Sri Lanka&apos;s Spice Heritage</h2>
               <div className="divider" style={{ margin: "24px 0", marginLeft: 0 }} />
               <p>
-                For over half a century, Gammalu Ceylon Foods has been the
-                trusted custodian of Sri Lanka&apos;s most prized spice
-                traditions. Our journey began in the misty highlands of
-                Ceylon, where ancient spice gardens have flourished for
-                generations.
+                Rooted in centuries of tradition and nurtured by the island&apos;s fertile soil, our products embody purity, authenticity, and unmatched flavor.
               </p>
               <p style={{ marginTop: "16px" }}>
-                Today, we bring these exceptional flavors to the world —
-                maintaining the same artisanal quality and sustainable
-                practices that have defined our family&apos;s legacy.
+                We are more than a trading company; we are custodians of Sri Lanka&apos;s spice heritage. Every batch we supply is carefully sourced, meticulously processed, and quality-checked to meet international standards. Our commitment is simple yet profound: to deliver premium quality spices that elevate culinary experiences and promote wellness naturally.
+              </p>
+              <p style={{ marginTop: "16px", fontWeight: 600, color: "var(--accent-red)" }}>
+                With Gammalu, you don&apos;t just taste spices — you taste the story of Sri Lanka&apos;s rich culture, its lush landscapes, and its dedication to excellence.
               </p>
               <Link href="/about" className="btn btn-outline" style={{ marginTop: "32px" }} id="intro-cta">
                 Discover Our Story
@@ -186,7 +160,7 @@ export default function HomePage() {
             ))}
           </div>
           <AnimatedSection>
-            <div className={styles.productsCtaWrap}>
+            <div className={styles.productsCtaWrap} style={{ marginTop: "40px" }}>
               <Link href="/products" className="btn btn-primary" id="products-cta-view-all">
                 View All Products
               </Link>
@@ -195,27 +169,62 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== WHY CHOOSE US ===== */}
+      {/* ===== WHY CHOOSE US / BUSINESS VALUES ===== */}
       <section className={`section ${styles.valuesSection}`} id="values-section">
         <div className="container">
           <AnimatedSection>
             <div className="section-header">
-              <span className="subtitle">Why Choose Us</span>
-              <h2>The Gammalu Promise</h2>
+              <span className="subtitle">Our Foundation</span>
+              <h2>Business Values</h2>
               <div className="divider" />
               <p>
-                We don&apos;t just export spices — we share a piece of Sri
-                Lanka&apos;s soul with every shipment.
+                At Gammalu Ceylon Foods, our foundation is built on values that reflect Sri Lanka&apos;s proud spice heritage and our unwavering commitment to excellence.
               </p>
             </div>
           </AnimatedSection>
-          <div className={styles.valuesGrid}>
+          
+          <div className={styles.valuesGrid} style={{ marginBottom: "60px" }}>
             {values.map((value, i) => (
               <AnimatedSection key={value.title} delay={i * 0.1} direction="scale">
                 <div className={styles.valueCard}>
                   <span className={styles.valueIcon}>{value.icon}</span>
                   <h4 className={styles.valueTitle}>{value.title}</h4>
                   <p className={styles.valueDesc}>{value.description}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection direction="up">
+            <div style={{ background: "var(--bg-primary)", padding: "40px", border: "1px solid var(--border-subtle)", textAlign: "center" }}>
+              <h3 style={{ fontSize: "1.5rem", marginBottom: "16px", color: "var(--text-primary)" }}>Sustainability & Responsibility</h3>
+              <p style={{ color: "var(--text-secondary)", lineHeight: "1.8", maxWidth: "800px", margin: "0 auto" }}>
+                We work with trusted partners who share our respect for the environment, ensuring ethical sourcing and long-term sustainability. At Gammalu Ceylon Foods, sustainability means empowering people and preserving tradition. We intentionally rely on low machinery and instead partner with skilled industry experts who bring generations of knowledge to spice cultivation and processing. By prioritizing human expertise over automation, we not only ensure authentic quality but also expand job opportunities within local communities. This approach strengthens livelihoods, supports artisanal craftsmanship, and builds a responsible supply chain that values people as much as products.
+              </p>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ===== QUALITY EXCELLENCES ===== */}
+      <section className={`section ${styles.productsSection}`} id="quality-section">
+        <div className="container">
+          <AnimatedSection>
+            <div className="section-header">
+              <span className="subtitle">Global Standards</span>
+              <h2>Quality Excellences</h2>
+              <div className="divider" />
+              <p>
+                We proudly supply products that meet the highest international standards. Through our trusted partners, our spices are certified with the following credentials:
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div style={{ display: "flex", justifyContent: "center", gap: "40px", flexWrap: "wrap", marginTop: "40px" }}>
+            {["GMP", "HACCP", "ISO 22000", "USDA Organic"].map((cert, i) => (
+              <AnimatedSection key={cert} direction="scale" delay={i * 0.1}>
+                <div style={{ padding: "20px 40px", background: "var(--bg-elevated)", borderRadius: "var(--radius-full)", fontWeight: "600", fontSize: "1.1rem", border: "1px solid var(--border-subtle)" }}>
+                  {cert}
                 </div>
               </AnimatedSection>
             ))}

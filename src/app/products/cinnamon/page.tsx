@@ -24,7 +24,7 @@ export default function CinnamonDetailPage() {
         <AnimatedSection direction="left" className={styles.imageContainer}>
           <Image
             src="/images/cina5.png"
-            alt="Premium Ceylon Cinnamon Sticks close-up"
+            alt="Premium Ceylon Cinnamon"
             fill
             priority
             className={styles.image}
@@ -36,38 +36,35 @@ export default function CinnamonDetailPage() {
         <AnimatedSection direction="right" className={styles.infoWrap}>
           <div className={styles.badgeRow}>
             <span className={styles.categoryBadge}>Cinnamon</span>
-            <span className={styles.originBadge}>Ceylon Pure</span>
+            <span className={styles.originBadge}>True Taste of Sri Lanka</span>
           </div>
 
           <h1 className={styles.title}>Ceylon Cinnamon</h1>
-          <p className={styles.scientificName}>Cinnamomum verum (True Cinnamon)</p>
+          <p className={styles.scientificName}>Cinnamomum Zeylanicum (True Cinnamon)</p>
 
           <p className={styles.description}>
-            Unlike common Cassia cinnamon, authentic Ceylon Cinnamon is hand-rolled from the delicate inner bark of the Cinnamomum verum tree. Known as &quot;True Cinnamon,&quot; it boasts a highly complex, sweet, and subtle flavor profile with citrus and woody notes. It contains negligible levels of coumarin, making it the safest and healthiest choice for daily wellness and culinary luxury.
+            Pure Ceylon Cinnamon – True Taste of Sri Lanka. Indigenous to Sri Lanka, it is the world&apos;s finest and most authentic cinnamon. Revered as true cinnamon or sweet cinnamon, it is distinct from Cassia, offering unmatched purity, delicate sweetness, and a refined aroma.
           </p>
 
           {/* Highlights / Stats */}
           <div className={styles.highlightsGrid}>
             <div className={styles.highlightCard}>
-              <span className={styles.highlightVal}>Alba</span>
-              <span className={styles.highlightLbl}>Highest Export Grade</span>
+              <span className={styles.highlightVal}>Global</span>
+              <span className={styles.highlightLbl}>Leadership</span>
             </div>
             <div className={styles.highlightCard}>
-              <span className={styles.highlightVal}>&lt; 0.004%</span>
-              <span className={styles.highlightLbl}>Coumarin Content</span>
+              <span className={styles.highlightVal}>Pure</span>
+              <span className={styles.highlightLbl}>Ceylon Cinnamon</span>
             </div>
             <div className={styles.highlightCard}>
               <span className={styles.highlightVal}>100%</span>
-              <span className={styles.highlightLbl}>Organic Certified</span>
+              <span className={styles.highlightLbl}>Authentic</span>
             </div>
           </div>
 
           <div className={styles.ctaRow}>
             <Link href="/contact?subject=Cinnamon Inquiry" className="btn btn-primary" id="cinnamon-cta-quote">
               Request B2B Quote
-            </Link>
-            <Link href="/contact" className="btn btn-outline" id="cinnamon-cta-sample">
-              Request Sample
             </Link>
           </div>
         </AnimatedSection>
@@ -76,35 +73,40 @@ export default function CinnamonDetailPage() {
       {/* Product Details Columns */}
       <section className={styles.detailsSection}>
         <AnimatedSection direction="up">
-          <h2 className={styles.sectionTitle}>Product Characteristics</h2>
+          <h2 className={styles.sectionTitle}>Characteristics</h2>
         </AnimatedSection>
 
         <div className={styles.detailsGrid}>
           {/* Column 1 */}
           <AnimatedSection direction="up" delay={0.1} className={styles.detailCol}>
-            <span className={styles.detailIcon}>✨</span>
-            <h3 className={styles.detailColTitle}>Flavor Profile</h3>
-            <p className={styles.detailColText}>
-              Delicately sweet, warm, and highly aromatic. It exhibits fine citrusy notes, woody undertones, and a smooth finish that does not overpower other ingredients in culinary applications.
-            </p>
+            <span className={styles.detailIcon}>🏛️</span>
+            <h3 className={styles.detailColTitle}>Heritage & Craftsmanship</h3>
+            <div style={{ textAlign: "left", fontSize: "0.95rem" }}>
+              <p style={{ marginBottom: "8px" }}><strong>Authentic origin:</strong> Grown exclusively in Sri Lanka, where cinnamon has been cultivated for centuries.</p>
+              <p style={{ marginBottom: "8px" }}><strong>Generational skill:</strong> The art of handcrafting cinnamon quills is unique to Sri Lanka, passed down through generations.</p>
+              <p><strong>Geographical indication:</strong> The name &quot;Ceylon Cinnamon&quot; is protected, symbolizing authenticity and heritage.</p>
+            </div>
           </AnimatedSection>
 
           {/* Column 2 */}
           <AnimatedSection direction="up" delay={0.2} className={styles.detailCol}>
-            <span className={styles.detailIcon}>🩺</span>
-            <h3 className={styles.detailColTitle}>Health Benefits</h3>
-            <p className={styles.detailColText}>
-              Rich in powerful antioxidants and polyphenols. Supports healthy blood sugar levels, promotes digestion, and offers anti-inflammatory properties with trace, completely safe coumarin levels.
-            </p>
+            <span className={styles.detailIcon}>✨</span>
+            <h3 className={styles.detailColTitle}>Flavor & Versatility</h3>
+            <div style={{ textAlign: "left", fontSize: "0.95rem" }}>
+              <p style={{ marginBottom: "8px" }}><strong>Distinctive aroma:</strong> Sweet, subtle, and sophisticated compared to the harsher Cassia.</p>
+              <p style={{ marginBottom: "8px" }}><strong>Culinary excellence:</strong> Enhances bakery goods, desserts, teas, hot cocoa, liqueurs, and spicy candies.</p>
+              <p><strong>Global demand:</strong> Preferred worldwide as a natural flavoring agent amid rising concerns over synthetic additives.</p>
+            </div>
           </AnimatedSection>
 
           {/* Column 3 */}
           <AnimatedSection direction="up" delay={0.3} className={styles.detailCol}>
-            <span className={styles.detailIcon}>📦</span>
-            <h3 className={styles.detailColTitle}>Packaging & Form</h3>
-            <p className={styles.detailColText}>
-              Available in whole quills (Alba, C5-Special, C5, C4 grades), cut quills, and premium fine powder. Packaged in moisture-resistant barrier bags to preserve pure essential oils.
-            </p>
+            <span className={styles.detailIcon}>🩺</span>
+            <h3 className={styles.detailColTitle}>Health & Wellness</h3>
+            <div style={{ textAlign: "left", fontSize: "0.95rem" }}>
+              <p style={{ marginBottom: "8px" }}><strong>Rich in antioxidants:</strong> Supporting overall health and vitality.</p>
+              <p><strong>Therapeutic properties:</strong> Widely used in pharmaceuticals and cosmetics for its therapeutic and aromatic properties.</p>
+            </div>
           </AnimatedSection>
         </div>
       </section>
@@ -123,13 +125,13 @@ export default function CinnamonDetailPage() {
         <div className={styles.sourcingOverlay} />
         <div className={styles.sourcingContent}>
           <AnimatedSection direction="up">
-            <span className={styles.sourcingSubtitle}>Direct Sourcing</span>
-            <h2 className={styles.sourcingTitle}>Sustainable Spice Gardens</h2>
+            <span className={styles.sourcingSubtitle}>Global Leadership</span>
+            <h2 className={styles.sourcingTitle}>The Most Valuable Spice of Sri Lanka</h2>
             <p className={styles.sourcingText}>
-              Our Ceylon Cinnamon is harvested from organic family-owned estates in southern Sri Lanka. Through sustainable peeling techniques handed down over generations, the tree bark regenerates naturally. This fair-trade process ensures that the local peelers receive sustainable livelihoods while protecting our island&apos;s natural bio-diversity.
+              Cinnamon is deeply tied to Sri Lanka&apos;s culture and economy. Recognized globally under the Pure Ceylon Cinnamon brand, established by the Sri Lanka Export Development Board (SLEDB). You can find this mark of true authenticity on our products.
             </p>
             <Link href="/about" className="btn btn-outline" id="cinnamon-about-cta">
-              Read Our Sourcing Story
+              Discover Our Heritage
             </Link>
           </AnimatedSection>
         </div>
