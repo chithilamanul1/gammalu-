@@ -9,22 +9,40 @@ import styles from './products.module.css';
 /* ── Product Data ── */
 const products = [
   {
-    name: 'Ceylon Cinnamon',
+    name: 'Ceylon Cinnamon Whole',
     origin: 'Sri Lanka',
     imageSrc: '/images/cina5.png',
     description:
-      "The world's finest true cinnamon, hand-harvested from the bark of Cinnamomum verum trees native to Sri Lanka.",
+      "The world's finest true cinnamon sticks, hand-harvested from the bark of Cinnamomum verum trees native to Sri Lanka.",
     category: 'Cinnamon',
     slug: '/products/cinnamon',
   },
   {
-    name: 'Black Pepper',
+    name: 'Ceylon Cinnamon Ground',
+    origin: 'Sri Lanka',
+    imageSrc: '/images/cina3.png',
+    description:
+      "Premium, finely ground true Ceylon cinnamon, perfect for baking, beverages, and savory dishes.",
+    category: 'Cinnamon',
+    slug: '/products/cinnamon-ground',
+  },
+  {
+    name: 'Black Pepper Whole',
     origin: 'Sri Lanka',
     imageSrc: '/images/peper.png',
     description:
-      'Bold and aromatic peppercorns, sun-dried to perfection in the highlands of Sri Lanka.',
+      'Bold and aromatic whole peppercorns, sun-dried to perfection in the highlands of Sri Lanka.',
     category: 'Pepper',
     slug: '/products/pepper',
+  },
+  {
+    name: 'Black Pepper Ground',
+    origin: 'Sri Lanka',
+    imageSrc: '/images/peper.png',
+    description:
+      'Freshly ground premium Ceylon black pepper, delivering a robust flavor and distinct floral-citrus notes.',
+    category: 'Pepper',
+    slug: '/products/pepper-ground',
   },
 ];
 
@@ -32,8 +50,6 @@ const categories = [
   'All',
   'Cinnamon',
   'Pepper',
-  'Exotic Blends',
-  'Whole Spices',
 ];
 
 export default function ProductsPage() {
