@@ -185,8 +185,8 @@ ${message}`;
                     <div className={styles.infoText}>
                       <span className={styles.infoLabel}>Address</span>
                       <span className={styles.infoValue}>
-                        No. 42, Spice Garden Road,<br />
-                        Colombo 05, Sri Lanka
+                        Pahalagama Road,<br />
+                        Weweldeniya, Sri Lanka
                       </span>
                     </div>
                   </div>

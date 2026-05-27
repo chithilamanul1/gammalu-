@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Footer.module.css";
 
 const footerLinks = {
@@ -23,11 +24,13 @@ export default function Footer() {
           {/* Brand Column */}
           <div className={styles.brandCol}>
             <div className={styles.brandLogo}>
-              <span className={styles.logoIcon}>🌿</span>
-              <div>
-                <h3 className={styles.brandName}>Gammalu</h3>
-                <span className={styles.brandTag}>Ceylon Foods (Pvt) Ltd</span>
-              </div>
+              <Image
+                src="/images/logo.png"
+                alt="Gammalu Ceylon Foods Logo"
+                width={150}
+                height={55}
+                style={{ objectFit: 'contain' }}
+              />
             </div>
             <p className={styles.brandDesc}>
               Premium organic spices sourced directly from the lush plantations
@@ -87,7 +90,7 @@ export default function Footer() {
             <div className={styles.contactInfo}>
               <div className={styles.contactItem}>
                 <span className={styles.contactIcon}>📍</span>
-                <span>Colombo, Sri Lanka</span>
+                <span>Pahalagama Road,<br />Weweldeniya, Sri Lanka</span>
               </div>
               <div className={styles.contactItem}>
                 <span className={styles.contactIcon}>📧</span>

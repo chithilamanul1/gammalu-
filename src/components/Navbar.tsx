@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import styles from "./Navbar.module.css";
 
 const navLinks = [
@@ -47,10 +48,15 @@ export default function Navbar() {
     >
       <div className={styles.inner}>
         <Link href="/" className={styles.logo} id="nav-logo">
-          <span className={styles.logoIcon}>🌿</span>
-          <div className={styles.logoText}>
-            <span className={styles.logoName}>Gammalu</span>
-            <span className={styles.logoTagline}>Ceylon Foods</span>
+          <div className={styles.logoImageWrap}>
+            <Image
+              src="/images/logo.png"
+              alt="Gammalu Ceylon Foods"
+              width={160}
+              height={60}
+              style={{ objectFit: 'contain', width: 'auto', height: '100%' }}
+              priority
+            />
           </div>
         </Link>
 
