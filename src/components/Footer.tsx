@@ -24,13 +24,15 @@ export default function Footer() {
           {/* Brand Column */}
           <div className={styles.brandCol}>
             <div className={styles.brandLogo}>
-              <Image
-                src="/images/logo.png"
-                alt="Gammalu Ceylon Foods Logo"
-                width={150}
-                height={55}
-                style={{ objectFit: 'contain' }}
-              />
+              <div className={styles.brandLogoWrap}>
+                <Image
+                  src="/images/logo.png"
+                  alt="Gammalu Ceylon Foods Logo"
+                  width={150}
+                  height={55}
+                  style={{ objectFit: 'contain', width: 'auto', height: '100%' }}
+                />
+              </div>
             </div>
             <p className={styles.brandDesc}>
               Premium organic spices sourced directly from the lush plantations
@@ -90,7 +92,7 @@ export default function Footer() {
             <div className={styles.contactInfo}>
               <div className={styles.contactItem}>
                 <span className={styles.contactIcon}>📍</span>
-                <span>Pahalagama Road,<br />Weweldeniya, Sri Lanka</span>
+                <span>No 79/3A, Pahalagama Road,<br />Weweldeniya, Sri Lanka</span>
               </div>
               <div className={styles.contactItem}>
                 <span className={styles.contactIcon}>📧</span>
@@ -104,50 +106,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Certifications Row */}
-        <div className={styles.certRow}>
-          <span className={styles.certRowLabel}>Certified Quality Standards</span>
-          <div className={styles.certLogos}>
-            <div className={styles.miniCert} title="USDA Organic">
-              <svg viewBox="0 0 100 100" fill="currentColor">
-                <circle cx="50" cy="50" r="46" stroke="currentColor" strokeWidth="6" fill="none" />
-                <circle cx="50" cy="50" r="38" stroke="currentColor" strokeWidth="1" strokeDasharray="3 3" fill="none" />
-                <text x="50" y="44" fontFamily="var(--font-heading)" fontSize="16" fontWeight="700" letterSpacing="0.05em" textAnchor="middle">USDA</text>
-                <line x1="20" y1="52" x2="80" y2="52" stroke="currentColor" strokeWidth="3" />
-                <text x="50" y="70" fontFamily="var(--font-body)" fontSize="11" fontWeight="600" letterSpacing="0.15em" textAnchor="middle">ORGANIC</text>
-              </svg>
-            </div>
-            <div className={styles.miniCert} title="ISO 22000">
-              <svg viewBox="0 0 100 100" fill="currentColor">
-                <circle cx="50" cy="50" r="46" stroke="currentColor" strokeWidth="6" fill="none" />
-                <text x="50" y="44" fontFamily="var(--font-heading)" fontSize="20" fontWeight="700" letterSpacing="0.05em" textAnchor="middle">ISO</text>
-                <text x="50" y="66" fontFamily="var(--font-heading)" fontSize="16" fontWeight="600" letterSpacing="0.05em" textAnchor="middle">22000</text>
-              </svg>
-            </div>
-            <div className={styles.miniCert} title="GMP Certified">
-              <svg viewBox="0 0 100 100" fill="currentColor">
-                <circle cx="50" cy="50" r="46" stroke="currentColor" strokeWidth="6" fill="none" />
-                <text x="50" y="48" fontFamily="var(--font-heading)" fontSize="22" fontWeight="700" letterSpacing="0.05em" textAnchor="middle">GMP</text>
-                <text x="50" y="68" fontFamily="var(--font-body)" fontSize="10" fontWeight="600" letterSpacing="0.15em" textAnchor="middle">CERTIFIED</text>
-              </svg>
-            </div>
-            <div className={styles.miniCert} title="HACCP Certified">
-              <svg viewBox="0 0 100 100" fill="currentColor">
-                <path d="M50 10 C65 10, 80 18, 80 38 C80 62, 50 86, 50 86 C50 86, 20 62, 20 38 C20 18, 35 10, 50 10 Z" stroke="currentColor" strokeWidth="6" fill="none" />
-                <text x="50" y="42" fontFamily="var(--font-heading)" fontSize="14" fontWeight="700" letterSpacing="0.05em" textAnchor="middle">HACCP</text>
-                <line x1="35" y1="50" x2="65" y2="50" stroke="currentColor" strokeWidth="3" />
-                <text x="50" y="63" fontFamily="var(--font-body)" fontSize="8" fontWeight="600" letterSpacing="0.15em" textAnchor="middle">CERTIFIED</text>
-              </svg>
-            </div>
-            <div className={styles.miniCert} title="Fair Trade Certified">
-              <svg viewBox="0 0 100 100" fill="currentColor">
-                <circle cx="50" cy="50" r="46" stroke="currentColor" strokeWidth="6" fill="none" />
-                <text x="50" y="48" fontFamily="var(--font-heading)" fontSize="16" fontWeight="700" letterSpacing="0.05em" textAnchor="middle">FAIR</text>
-                <text x="50" y="66" fontFamily="var(--font-heading)" fontSize="16" fontWeight="700" letterSpacing="0.05em" textAnchor="middle">TRADE</text>
-              </svg>
-            </div>
-          </div>
-        </div>
 
         {/* Bottom Bar */}
         <div className={styles.bottom}>

@@ -185,7 +185,7 @@ ${message}`;
                     <div className={styles.infoText}>
                       <span className={styles.infoLabel}>Address</span>
                       <span className={styles.infoValue}>
-                        Pahalagama Road,<br />
+                        No 79/3A, Pahalagama Road,<br />
                         Weweldeniya, Sri Lanka
                       </span>
                     </div>

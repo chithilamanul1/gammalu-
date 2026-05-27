@@ -36,13 +36,29 @@
 .logoImageWrap {
   display: flex;
   align-items: center;
-  height: 48px; /* Standard premium logo height */
-  transition: height var(--transition-base);
+  height: 120px; /* Make container large to zoom in on cropped area */
+  margin-top: -36px;
+  margin-bottom: -36px;
+  transition: all var(--transition-base);
+}
+
+.scrolled .logoImageWrap {
+  height: 100px;
+  margin-top: -28px;
+  margin-bottom: -28px;
 }
 
 @media (min-width: 769px) {
   .logoImageWrap {
-    height: 60px; /* Slightly larger on desktop */
+    height: 150px;
+    margin-top: -45px;
+    margin-bottom: -45px;
+  }
+  
+  .scrolled .logoImageWrap {
+    height: 120px;
+    margin-top: -36px;
+    margin-bottom: -36px;
   }
 }
 

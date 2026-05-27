@@ -39,6 +39,14 @@
   margin-bottom: 24px;
 }
 
+.brandLogoWrap {
+  display: flex;
+  align-items: center;
+  height: 110px; /* Zoom logo by adjusting viewport */
+  margin-top: -30px;
+  margin-bottom: -30px;
+}
+
 .logoIcon {
   font-size: 2rem;
   line-height: 1;
