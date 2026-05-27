@@ -7,7 +7,35 @@ import styles from './contact.module.css';
 export default function ContactPage() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert('Thank you for your message! We will get back to you within 24 hours.');
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const company = formData.get('company') as string;
+    const subject = formData.get('subject') as string;
+    const message = formData.get('message') as string;
+
+    const formattedCompany = company ? `\n*Company:* ${company}` : '';
+    const subjectLabel = {
+      general: 'General Inquiry',
+      wholesale: 'Wholesale & Distribution',
+      export: 'Export & B2B Partnership',
+      product: 'Product Information',
+      feedback: 'Feedback & Suggestions',
+      other: 'Other'
+    }[subject] || subject;
+
+    const text = `*New Gammalu Ceylon Foods Inquiry*
+*Name:* ${name}
+*Email:* ${email}${formattedCompany}
+*Subject:* ${subjectLabel}
+
+*Message:*
+${message}`;
+
+    const encodedText = encodeURIComponent(text);
+    const whatsappUrl = `https://wa.me/94750512759?text=${encodedText}`;
+    
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -125,20 +153,15 @@ export default function ContactPage() {
                   </div>
 
                   <button type="submit" className={styles.submitButton}>
-                    <span className={styles.submitText}>Send Message</span>
+                    <span className={styles.submitText}>Send via WhatsApp</span>
                     <svg
                       className={styles.submitIcon}
                       width="20"
                       height="20"
                       viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                      fill="currentColor"
                     >
-                      <line x1="22" y1="2" x2="11" y2="13" />
-                      <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.464L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.451 5.403.002 9.796-4.385 9.799-9.789.002-2.617-1.012-5.078-2.857-6.927C16.32 1.994 13.864 1.01 11.245 1.01 5.845 1.01 1.455 5.4 1.451 10.8c-.001 1.517.409 2.998 1.187 4.303l-1.055 3.855 3.957-1.037c1.3.708 2.658 1.085 4.307 1.086zm10.74-7.25c-.29-.144-1.71-.844-1.975-.94-.266-.096-.46-.144-.652.144-.19.288-.74.94-.906 1.133-.167.19-.334.215-.623.072-.29-.145-1.223-.45-2.33-1.44-.86-.767-1.443-1.716-1.61-2.005-.168-.29-.018-.445.127-.588.13-.13.29-.337.435-.506.145-.169.193-.289.29-.482.096-.193.048-.362-.024-.506-.072-.144-.652-1.573-.893-2.152-.236-.57-.478-.49-.652-.5l-.556-.01c-.19 0-.5.072-.76.362-.262.29-1 .977-1 2.387 0 1.41 1.026 2.774 1.17 2.968.145.19 2.02 3.084 4.895 4.325.684.295 1.218.472 1.635.604.688.22 1.314.19 1.81.116.55-.082 1.71-.698 1.95-1.37.24-.674.24-1.253.17-1.372-.07-.12-.26-.192-.55-.337z"/>
                     </svg>
                   </button>
                 </form>
