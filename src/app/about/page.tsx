@@ -6,18 +6,33 @@ import styles from './about.module.css';
 
 const certifications = [
   {
-    name: "USDA Organic",
-    subtitle: "Organic Certified",
-    description: "Certified organic farming practices, free from synthetic chemicals and pesticides.",
+    name: "GMP Certified",
+    subtitle: "Quality Assurance",
+    description: "Consistent quality control, hygienic handling, and operational excellence at all stages.",
     icon: (
-      <svg viewBox="0 0 100 100" fill="none" className={styles.certIconContainer} xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="46" stroke="currentColor" strokeWidth="2" />
-        <circle cx="50" cy="50" r="41" stroke="currentColor" strokeWidth="0.75" strokeDasharray="3 3" />
-        <text x="50" y="42" fontFamily="var(--font-heading)" fontSize="13" fontWeight="700" letterSpacing="0.05em" textAnchor="middle" fill="currentColor">USDA</text>
-        <line x1="25" y1="49" x2="75" y2="49" stroke="currentColor" strokeWidth="1.25" />
-        <text x="50" y="65" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" letterSpacing="0.15em" textAnchor="middle" fill="currentColor">ORGANIC</text>
-        <path d="M44 74 C44 74, 46 71, 50 71 C54 71, 56 74, 56 74 C56 74, 52 76, 50 76 C48 76, 44 74, 44 74 Z" fill="currentColor" opacity="0.7" />
-      </svg>
+      <Image
+        src="/images/gmp.jpg"
+        alt="GMP Certified Logo"
+        width={80}
+        height={80}
+        className={styles.certIconContainer}
+        style={{ objectFit: 'contain' }}
+      />
+    )
+  },
+  {
+    name: "HACCP Certified",
+    subtitle: "Hazard Prevention",
+    description: "Systematic prevention of biological, chemical, and physical hazards in food safety processing.",
+    icon: (
+      <Image
+        src="/images/haccp.png"
+        alt="HACCP Certified Logo"
+        width={80}
+        height={80}
+        className={styles.certIconContainer}
+        style={{ objectFit: 'contain' }}
+      />
     )
   },
   {
@@ -25,33 +40,29 @@ const certifications = [
     subtitle: "Food Safety System",
     description: "Strict safety management systems from harvesting to packaging, meeting global export guidelines.",
     icon: (
-      <svg viewBox="0 0 100 100" fill="none" className={styles.certIconContainer} xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="46" stroke="currentColor" strokeWidth="2" />
-        <circle cx="50" cy="50" r="38" stroke="currentColor" strokeWidth="0.75" opacity="0.15" />
-        <path d="M14 50 H86" stroke="currentColor" strokeWidth="0.75" opacity="0.15" />
-        <path d="M50 14 V86" stroke="currentColor" strokeWidth="0.75" opacity="0.15" />
-        <path d="M22 32 C30 36, 70 36, 78 32" stroke="currentColor" strokeWidth="0.75" opacity="0.15" fill="none" />
-        <path d="M22 68 C30 64, 70 64, 78 68" stroke="currentColor" strokeWidth="0.75" opacity="0.15" fill="none" />
-        <text x="50" y="40" fontFamily="var(--font-heading)" fontSize="17" fontWeight="700" letterSpacing="0.05em" textAnchor="middle" fill="currentColor">ISO</text>
-        <text x="50" y="58" fontFamily="var(--font-heading)" fontSize="13" fontWeight="600" letterSpacing="0.05em" textAnchor="middle" fill="currentColor">22000</text>
-        <text x="50" y="72" fontFamily="var(--font-body)" fontSize="6.5" fontWeight="600" letterSpacing="0.12em" textAnchor="middle" fill="currentColor">FOOD SAFETY</text>
-      </svg>
+      <Image
+        src="/images/iso-22000.svg"
+        alt="ISO 22000 Logo"
+        width={80}
+        height={80}
+        className={styles.certIconContainer}
+        style={{ objectFit: 'contain' }}
+      />
     )
   },
   {
-    name: "Fair Trade",
-    subtitle: "Ethical Sourcing",
-    description: "Empowering smallholder farmers, ensuring fair compensation and sustainable community development.",
+    name: "USDA Organic",
+    subtitle: "Organic Certified",
+    description: "Certified organic farming practices, free from synthetic chemicals and pesticides.",
     icon: (
-      <svg viewBox="0 0 100 100" fill="none" className={styles.certIconContainer} xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="46" stroke="currentColor" strokeWidth="2" />
-        <circle cx="50" cy="50" r="41" stroke="currentColor" strokeWidth="0.75" opacity="0.2" fill="none" />
-        <path d="M50 20 C66.5 20, 80 33.5, 80 50 C80 66.5, 66.5 80, 50 80 C33.5 80, 20 66.5, 20 50 C20 33.5, 33.5 20, 50 20 Z" stroke="currentColor" strokeWidth="0.75" strokeDasharray="2 2" fill="none" />
-        <path d="M50 28 C45 28 35 32 35 44 C35 55 50 64 50 72 C50 64 65 55 65 44 C65 32 55 28 50 28 Z" fill="currentColor" opacity="0.1" />
-        <text x="50" y="44" fontFamily="var(--font-heading)" fontSize="13" fontWeight="700" letterSpacing="0.1em" textAnchor="middle" fill="currentColor">FAIR</text>
-        <text x="50" y="60" fontFamily="var(--font-heading)" fontSize="13" fontWeight="700" letterSpacing="0.1em" textAnchor="middle" fill="currentColor">TRADE</text>
-        <text x="50" y="72" fontFamily="var(--font-body)" fontSize="6" fontWeight="600" letterSpacing="0.1em" textAnchor="middle" fill="currentColor">CERTIFIED</text>
-      </svg>
+      <Image
+        src="/images/usda-organic.svg"
+        alt="USDA Organic Logo"
+        width={80}
+        height={80}
+        className={styles.certIconContainer}
+        style={{ objectFit: 'contain' }}
+      />
     )
   }
 ];
@@ -64,12 +75,13 @@ export default function AboutPage() {
         <div className={styles.heroCircle} />
         <div className={styles.heroImageWrap}>
           <Image
-            src="/images/cinnamon-hero.png"
-            alt="Cinnamon sticks and star anise"
+            src="/images/about-hero.jpg"
+            alt="Authentic Ceylon cinnamon rolls on red background"
             fill
             priority
             className={styles.heroImage}
             sizes="(max-width: 768px) 100vw, 40vw"
+            style={{ objectFit: 'cover', borderRadius: '12px' }}
           />
         </div>
         <div className={styles.heroContent}>
@@ -234,7 +246,7 @@ export default function AboutPage() {
               <h2>Our Certifications</h2>
               <div className="divider" />
               <p>
-                Every product is rigorously tested and certified, so you can trust what you taste.
+                Our manufacturers&apos; products are rigorously tested and certified, so you can trust what you taste.
               </p>
             </div>
           </AnimatedSection>

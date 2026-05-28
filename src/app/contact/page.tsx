@@ -33,7 +33,7 @@ export default function ContactPage() {
 ${message}`;
 
     const encodedText = encodeURIComponent(text);
-    const whatsappUrl = `https://wa.me/94750512759?text=${encodedText}`;
+    const whatsappUrl = `https://wa.me/94754053207?text=${encodedText}`;
     
     window.open(whatsappUrl, '_blank');
   };
@@ -198,8 +198,8 @@ ${message}`;
                     </div>
                     <div className={styles.infoText}>
                       <span className={styles.infoLabel}>Phone</span>
-                      <a href="tel:+94750512759" className={styles.infoValue}>
-                        +94 75 051 2759
+                      <a href="tel:+94754053207" className={styles.infoValue}>
+                        +94 75 405 3207
                       </a>
                     </div>
                   </div>
@@ -251,7 +251,7 @@ ${message}`;
                     Looking to bring authentic Ceylon spices to your market? Our export team 
                     is ready to discuss bulk orders, private labeling, and distribution partnerships.
                   </p>
-                  <a href="mailto:exports@gammaluceylon.com" className={styles.b2bButton}>
+                  <a href="mailto:info@gammalu.lk" className={styles.b2bButton}>
                     <span>Contact Export Team</span>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <line x1="5" y1="12" x2="19" y2="12" />

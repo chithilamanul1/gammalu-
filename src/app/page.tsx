@@ -12,7 +12,7 @@ const featuredProducts = [
     origin: "Sri Lanka",
     description:
       "Pure Ceylon Cinnamon – True Taste of Sri Lanka. The world's finest and most authentic cinnamon, distinct from Cassia.",
-    imageSrc: "/images/cina5.png",
+    imageSrc: "/images/cinnamon-card.png",
     imageAlt: "Premium Ceylon cinnamon sticks",
     slug: "/products/cinnamon",
   },
@@ -21,7 +21,7 @@ const featuredProducts = [
     origin: "Sri Lanka",
     description:
       "Known as the \"King of the Spices\", prized worldwide for its high piperine content, rich aroma, and distinct floral-citrus notes.",
-    imageSrc: "/images/peper.png",
+    imageSrc: "/images/pepper-card.jpg",
     imageAlt: "Premium Sri Lankan black peppercorns",
     slug: "/products/pepper",
   },
@@ -29,51 +29,18 @@ const featuredProducts = [
 
 const certifications = [
   {
-    name: "USDA Organic",
-    subtitle: "Organic Certified",
-    description: "Certified organic farming practices, free from synthetic chemicals and pesticides.",
-    icon: (
-      <svg viewBox="0 0 100 100" fill="none" className={styles.certIconContainer} xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="46" stroke="currentColor" strokeWidth="2" />
-        <circle cx="50" cy="50" r="41" stroke="currentColor" strokeWidth="0.75" strokeDasharray="3 3" />
-        <text x="50" y="42" fontFamily="var(--font-heading)" fontSize="13" fontWeight="700" letterSpacing="0.05em" textAnchor="middle" fill="currentColor">USDA</text>
-        <line x1="25" y1="49" x2="75" y2="49" stroke="currentColor" strokeWidth="1.25" />
-        <text x="50" y="65" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" letterSpacing="0.15em" textAnchor="middle" fill="currentColor">ORGANIC</text>
-        <path d="M44 74 C44 74, 46 71, 50 71 C54 71, 56 74, 56 74 C56 74, 52 76, 50 76 C48 76, 44 74, 44 74 Z" fill="currentColor" opacity="0.7" />
-      </svg>
-    )
-  },
-  {
-    name: "ISO 22000",
-    subtitle: "Food Safety System",
-    description: "Strict safety management systems from harvesting to packaging, meeting global export guidelines.",
-    icon: (
-      <svg viewBox="0 0 100 100" fill="none" className={styles.certIconContainer} xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="46" stroke="currentColor" strokeWidth="2" />
-        <circle cx="50" cy="50" r="38" stroke="currentColor" strokeWidth="0.75" opacity="0.15" />
-        <path d="M14 50 H86" stroke="currentColor" strokeWidth="0.75" opacity="0.15" />
-        <path d="M50 14 V86" stroke="currentColor" strokeWidth="0.75" opacity="0.15" />
-        <path d="M22 32 C30 36, 70 36, 78 32" stroke="currentColor" strokeWidth="0.75" opacity="0.15" fill="none" />
-        <path d="M22 68 C30 64, 70 64, 78 68" stroke="currentColor" strokeWidth="0.75" opacity="0.15" fill="none" />
-        <text x="50" y="40" fontFamily="var(--font-heading)" fontSize="17" fontWeight="700" letterSpacing="0.05em" textAnchor="middle" fill="currentColor">ISO</text>
-        <text x="50" y="58" fontFamily="var(--font-heading)" fontSize="13" fontWeight="600" letterSpacing="0.05em" textAnchor="middle" fill="currentColor">22000</text>
-        <text x="50" y="72" fontFamily="var(--font-body)" fontSize="6.5" fontWeight="600" letterSpacing="0.12em" textAnchor="middle" fill="currentColor">FOOD SAFETY</text>
-      </svg>
-    )
-  },
-  {
     name: "GMP Certified",
     subtitle: "Quality Assurance",
     description: "Consistent quality control, hygienic handling, and operational excellence at all stages.",
     icon: (
-      <svg viewBox="0 0 100 100" fill="none" className={styles.certIconContainer} xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="46" stroke="currentColor" strokeWidth="2" />
-        <circle cx="50" cy="50" r="41" stroke="currentColor" strokeWidth="0.75" opacity="0.2" />
-        <path d="M50 17 L52.5 22 L57.5 22 L53.5 25 L55 30 L50 27 L45 30 L46.5 25 L42.5 22 L47.5 22 Z" fill="currentColor" />
-        <text x="50" y="51" fontFamily="var(--font-heading)" fontSize="19" fontWeight="700" letterSpacing="0.05em" textAnchor="middle" fill="currentColor">GMP</text>
-        <text x="50" y="67" fontFamily="var(--font-body)" fontSize="8" fontWeight="600" letterSpacing="0.15em" textAnchor="middle" fill="currentColor">CERTIFIED</text>
-        <text x="50" y="78" fontFamily="var(--font-body)" fontSize="6" fontWeight="500" letterSpacing="0.08em" textAnchor="middle" fill="currentColor" opacity="0.8">EXCELLENT QUALITY</text>
-      </svg>
+      <Image
+        src="/images/gmp.jpg"
+        alt="GMP Certified Logo"
+        width={80}
+        height={80}
+        className={styles.certIconContainer}
+        style={{ objectFit: 'contain' }}
+      />
     )
   },
   {
@@ -81,13 +48,44 @@ const certifications = [
     subtitle: "Hazard Prevention",
     description: "Systematic prevention of biological, chemical, and physical hazards in food safety processing.",
     icon: (
-      <svg viewBox="0 0 100 100" fill="none" className={styles.certIconContainer} xmlns="http://www.w3.org/2000/svg">
-        <path d="M50 10 C65 10, 80 18, 80 38 C80 62, 50 86, 50 86 C50 86, 20 62, 20 38 C20 18, 35 10, 50 10 Z" stroke="currentColor" strokeWidth="2" fill="none" />
-        <path d="M50 15 C62 15, 75 22, 75 38 C75 58, 50 79, 50 79 C50 79, 25 58, 25 38 C25 22, 38 15, 50 15 Z" stroke="currentColor" strokeWidth="0.75" opacity="0.2" fill="none" />
-        <text x="50" y="42" fontFamily="var(--font-heading)" fontSize="14" fontWeight="700" letterSpacing="0.05em" textAnchor="middle" fill="currentColor">HACCP</text>
-        <line x1="35" y1="50" x2="65" y2="50" stroke="currentColor" strokeWidth="1.25" />
-        <text x="50" y="63" fontFamily="var(--font-body)" fontSize="8" fontWeight="600" letterSpacing="0.15em" textAnchor="middle" fill="currentColor">CERTIFIED</text>
-      </svg>
+      <Image
+        src="/images/haccp.png"
+        alt="HACCP Certified Logo"
+        width={80}
+        height={80}
+        className={styles.certIconContainer}
+        style={{ objectFit: 'contain' }}
+      />
+    )
+  },
+  {
+    name: "ISO 22000",
+    subtitle: "Food Safety System",
+    description: "Strict safety management systems from harvesting to packaging, meeting global export guidelines.",
+    icon: (
+      <Image
+        src="/images/iso-22000.svg"
+        alt="ISO 22000 Logo"
+        width={80}
+        height={80}
+        className={styles.certIconContainer}
+        style={{ objectFit: 'contain' }}
+      />
+    )
+  },
+  {
+    name: "USDA Organic",
+    subtitle: "Organic Certified",
+    description: "Certified organic farming practices, free from synthetic chemicals and pesticides.",
+    icon: (
+      <Image
+        src="/images/usda-organic.svg"
+        alt="USDA Organic Logo"
+        width={80}
+        height={80}
+        className={styles.certIconContainer}
+        style={{ objectFit: 'contain' }}
+      />
     )
   }
 ];
@@ -123,12 +121,13 @@ export default function HomePage() {
         <div className={styles.heroCircle} />
         <div className={styles.heroImageWrap}>
           <Image
-            src="/images/cinnamon-hero.png"
-            alt="Premium floating Sri Lankan spices"
+            src="/images/pepper-hero.jpg"
+            alt="Premium Sri Lankan spices and peppercorns"
             fill
             className={styles.heroImage}
             priority
             sizes="(max-width: 768px) 100vw, 50vw"
+            style={{ objectFit: 'cover', borderRadius: '12px' }}
           />
         </div>
         <div className={`container ${styles.heroContent}`}>
@@ -173,11 +172,12 @@ export default function HomePage() {
             <AnimatedSection direction="left" className={styles.introImageWrap}>
               <div className={styles.introImageContainer}>
                 <Image
-                  src="/images/cina1.png"
-                  alt="Authentic Ceylon spices"
+                  src="/images/cinnamon-intro.jpg"
+                  alt="Authentic premium Ceylon cinnamon sticks"
                   fill
                   className={styles.introImage}
                   sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
               <div className={styles.introDot} />
@@ -280,7 +280,7 @@ export default function HomePage() {
               <h2>Quality Excellences</h2>
               <div className="divider" />
               <p>
-                We proudly supply products that meet the highest international standards. Through our trusted partners, our spices are certified with the following credentials:
+                We proudly supply products that meet the highest international standards. Through our trusted manufacturing partners, our spices are certified with the following credentials:
               </p>
             </div>
           </AnimatedSection>

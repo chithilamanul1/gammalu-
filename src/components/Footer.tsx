@@ -100,7 +100,7 @@ export default function Footer() {
               </div>
               <div className={styles.contactItem}>
                 <span className={styles.contactIcon}>📞</span>
-                <a href="tel:+94750512759">+94 75 051 2759</a>
+                <a href="tel:+94754053207">+94 75 405 3207</a>
               </div>
             </div>
           </div>
@@ -112,6 +112,10 @@ export default function Footer() {
           <p className={styles.copyright}>
             © {new Date().getFullYear()} Gammalu Ceylon Foods (Pvt) Ltd. All
             rights reserved.
+            <br />
+            <span style={{ opacity: 0.7, fontSize: '0.85em' }}>
+              this is made my chithila manul seranex
+            </span>
           </p>
           <div className={styles.bottomLinks}>
             <a href="#">Privacy Policy</a>
