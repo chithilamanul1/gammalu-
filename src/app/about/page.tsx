@@ -255,7 +255,6 @@ export default function AboutPage() {
             {certifications.map((cert, i) => (
               <AnimatedSection key={cert.name} direction="scale" delay={i * 0.1}>
                 <div className={styles.certCard}>
-                  {cert.icon}
                   <h4 className={styles.certCardTitle}>{cert.name}</h4>
                   <span className={styles.certCardSubtitle}>{cert.subtitle}</span>
                   <p className={styles.certCardDesc}>{cert.description}</p>
