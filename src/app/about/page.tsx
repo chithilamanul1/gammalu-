@@ -75,13 +75,10 @@ export default function AboutPage() {
         <div className={styles.heroCircle} />
         <div className={`container ${styles.heroGrid}`}>
           <div className={styles.heroContent}>
-            <AnimatedSection direction="up" delay={0.1}>
-              <p className={styles.heroLabel}>Since 2020</p>
-            </AnimatedSection>
-            <AnimatedSection direction="up" delay={0.25}>
+            <AnimatedSection direction="up" delay={0.15}>
               <h1 className={styles.heroTitle}>Our Heritage</h1>
             </AnimatedSection>
-            <AnimatedSection direction="up" delay={0.4}>
+            <AnimatedSection direction="up" delay={0.3}>
               <p className={styles.heroSubtitle}>
                 From the lush highlands of Ceylon to your table — a legacy of purity, passion, and premium spices.
               </p>

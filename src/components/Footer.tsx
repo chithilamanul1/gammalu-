@@ -113,7 +113,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Gammalu Ceylon Foods (Pvt) Ltd. All
             rights reserved.
             <span className={styles.developerCredit}>
-              Designed & Developed by Chithila Manul & Seranex
+              Designed & Developed by Chithila Manul (<a href="tel:0728382638">0728382638</a>) & Seranex
             </span>
           </p>
           <div className={styles.bottomLinks}>

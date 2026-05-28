@@ -20,7 +20,7 @@ const products = [
   {
     name: 'Ceylon Cinnamon Ground',
     origin: 'Sri Lanka',
-    imageSrc: '/images/cina3.png',
+    imageSrc: '/images/cinnamon-ground.png',
     description:
       "Premium, finely ground true Ceylon cinnamon, perfect for baking, beverages, and savory dishes.",
     category: 'Cinnamon',
@@ -38,7 +38,7 @@ const products = [
   {
     name: 'Black Pepper Ground',
     origin: 'Sri Lanka',
-    imageSrc: '/images/peper.png',
+    imageSrc: '/images/pepper-ground.png',
     description:
       'Freshly ground premium Ceylon black pepper, delivering a robust flavor and distinct floral-citrus notes.',
     category: 'Pepper',
