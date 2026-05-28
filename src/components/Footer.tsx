@@ -112,9 +112,8 @@ export default function Footer() {
           <p className={styles.copyright}>
             © {new Date().getFullYear()} Gammalu Ceylon Foods (Pvt) Ltd. All
             rights reserved.
-            <br />
-            <span style={{ opacity: 0.7, fontSize: '0.85em' }}>
-              this is made my chithila manul seranex
+            <span className={styles.developerCredit}>
+              Designed & Developed by Chithila Manul & Seranex
             </span>
           </p>
           <div className={styles.bottomLinks}>
