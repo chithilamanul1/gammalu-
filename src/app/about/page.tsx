@@ -73,29 +73,31 @@ export default function AboutPage() {
       {/* ── Hero Banner ── */}
       <section className={styles.hero}>
         <div className={styles.heroCircle} />
-        <div className={styles.heroImageWrap}>
-          <Image
-            src="/images/about-hero.jpg"
-            alt="Authentic Ceylon cinnamon rolls on red background"
-            fill
-            priority
-            className={styles.heroImage}
-            sizes="(max-width: 768px) 100vw, 40vw"
-            style={{ objectFit: 'cover', borderRadius: '12px' }}
-          />
-        </div>
-        <div className={styles.heroContent}>
-          <AnimatedSection direction="up" delay={0.1}>
-            <p className={styles.heroLabel}>Since 2020</p>
-          </AnimatedSection>
-          <AnimatedSection direction="up" delay={0.25}>
-            <h1 className={styles.heroTitle}>Our Heritage</h1>
-          </AnimatedSection>
-          <AnimatedSection direction="up" delay={0.4}>
-            <p className={styles.heroSubtitle}>
-              From the lush highlands of Ceylon to your table — a legacy of purity, passion, and premium spices.
-            </p>
-          </AnimatedSection>
+        <div className={`container ${styles.heroGrid}`}>
+          <div className={styles.heroContent}>
+            <AnimatedSection direction="up" delay={0.1}>
+              <p className={styles.heroLabel}>Since 2020</p>
+            </AnimatedSection>
+            <AnimatedSection direction="up" delay={0.25}>
+              <h1 className={styles.heroTitle}>Our Heritage</h1>
+            </AnimatedSection>
+            <AnimatedSection direction="up" delay={0.4}>
+              <p className={styles.heroSubtitle}>
+                From the lush highlands of Ceylon to your table — a legacy of purity, passion, and premium spices.
+              </p>
+            </AnimatedSection>
+          </div>
+          <div className={styles.heroImageWrap}>
+            <Image
+              src="/images/about-hero.jpg"
+              alt="Authentic Ceylon cinnamon rolls on red background"
+              fill
+              priority
+              className={styles.heroImage}
+              sizes="(max-width: 768px) 100vw, 40vw"
+              style={{ objectFit: 'cover', borderRadius: '12px' }}
+            />
+          </div>
         </div>
       </section>
 
