@@ -124,7 +124,15 @@ export default function HomePage() {
             src="/images/pepper-hero.jpg"
             alt="Premium Sri Lankan spices and peppercorns"
             fill
-            className={styles.heroImage}
+            className={`${styles.heroImage} ${styles.desktopImage}`}
+            priority
+            sizes="100vw"
+          />
+          <Image
+            src="/images/pepper-hero-mobile.jpg"
+            alt="Premium Sri Lankan spices and cinnamon coffee"
+            fill
+            className={`${styles.heroImage} ${styles.mobileImage}`}
             priority
             sizes="100vw"
           />
