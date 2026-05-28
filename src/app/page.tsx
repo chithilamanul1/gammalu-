@@ -137,34 +137,36 @@ export default function HomePage() {
             sizes="100vw"
           />
         </div>
-        <div className={`container ${styles.heroContent}`}>
-          <AnimatedSection direction="up" delay={0.1}>
-            <span className={styles.heroSubtitle}>
-              Premium Ceylon Spices · Sri Lanka
-            </span>
-          </AnimatedSection>
-          <AnimatedSection direction="up" delay={0.25}>
-            <h1 className={styles.heroTitle}>
-              Gammalu
-              <br />
-              <span className={styles.heroAccent}>Ceylon Foods</span>
-            </h1>
-          </AnimatedSection>
-          <AnimatedSection direction="up" delay={0.4}>
-            <p className={styles.heroDesc}>
-              At Gammalu Ceylon Foods, we bring the world the finest treasures of Sri Lanka — premium Ceylon cinnamon and handpicked black pepper.
-            </p>
-          </AnimatedSection>
-          <AnimatedSection direction="up" delay={0.55}>
-            <div className={styles.heroCtas}>
-              <Link href="/products" className="btn btn-primary" id="hero-cta-explore">
-                Explore Collection
-              </Link>
-              <Link href="/about" className="btn btn-outline" id="hero-cta-story">
-                Our Story
-              </Link>
-            </div>
-          </AnimatedSection>
+        <div className="container">
+          <div className={styles.heroContent}>
+            <AnimatedSection direction="up" delay={0.1}>
+              <span className={styles.heroSubtitle}>
+                Premium Ceylon Spices · Sri Lanka
+              </span>
+            </AnimatedSection>
+            <AnimatedSection direction="up" delay={0.25}>
+              <h1 className={styles.heroTitle}>
+                Gammalu
+                <br />
+                <span className={styles.heroAccent}>Ceylon Foods</span>
+              </h1>
+            </AnimatedSection>
+            <AnimatedSection direction="up" delay={0.4}>
+              <p className={styles.heroDesc}>
+                At Gammalu Ceylon Foods, we bring the world the finest treasures of Sri Lanka — premium Ceylon cinnamon and handpicked black pepper.
+              </p>
+            </AnimatedSection>
+            <AnimatedSection direction="up" delay={0.55}>
+              <div className={styles.heroCtas}>
+                <Link href="/products" className="btn btn-primary" id="hero-cta-explore">
+                  Explore Collection
+                </Link>
+                <Link href="/about" className="btn btn-outline" id="hero-cta-story">
+                  Our Story
+                </Link>
+              </div>
+            </AnimatedSection>
+          </div>
         </div>
         <div className={styles.scrollIndicator}>
           <div className={styles.scrollLine} />
