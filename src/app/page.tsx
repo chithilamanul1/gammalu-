@@ -270,8 +270,8 @@ export default function HomePage() {
           </div>
 
           <AnimatedSection direction="up">
-            <div style={{ background: "var(--bg-primary)", padding: "40px", border: "1px solid var(--border-subtle)", textAlign: "center" }}>
-              <h3 style={{ fontSize: "1.5rem", marginBottom: "16px", color: "var(--text-primary)" }}>Sustainability & Responsibility</h3>
+            <div style={{ background: "var(--accent-red-dim)", padding: "40px", border: "1px solid rgba(139, 30, 15, 0.15)", textAlign: "center" }}>
+              <h3 style={{ fontSize: "1.5rem", marginBottom: "16px", color: "var(--accent-red)" }}>Sustainability & Responsibility</h3>
               <p style={{ color: "var(--text-secondary)", lineHeight: "1.8", maxWidth: "800px", margin: "0 auto" }}>
                 At Gammalu Ceylon Foods, sustainability means empowering people and preserving tradition. We intentionally rely on low machinery and instead partner with skilled industry experts who bring generations of knowledge to spice cultivation and processing. By prioritizing human expertise over automation, we not only ensure authentic quality but also expand job opportunities within local communities. This approach strengthens livelihoods, supports artisanal craftsmanship, and builds a responsible supply chain that values people as much as products, partnering with those who share our respect for the environment to ensure ethical sourcing and long-term sustainability.
               </p>
