@@ -253,6 +253,18 @@
   color: var(--accent-gold);
 }
 
+.valueIconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  margin-bottom: var(--space-lg);
+}
+
+.valueIconImage {
+  object-fit: contain;
+}
+
 .valueTitle {
   font-size: 1.4rem;
   margin-bottom: var(--space-sm);

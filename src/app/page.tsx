@@ -92,22 +92,22 @@ const certifications = [
 
 const values = [
   {
-    icon: "⭐",
+    iconPath: "/images/value-search.png",
     title: "Uncompromising Quality",
     description: "We believe true value lies in purity and authenticity. Every batch of Ceylon cinnamon and black pepper we supply is carefully selected, processed, and tested to meet the highest standards.",
   },
   {
-    icon: "🏛️",
+    iconPath: "/images/value-building.png",
     title: "Heritage & Authenticity",
     description: "Our products are not just commodities — they are cultural treasures. We honor centuries-old traditions while ensuring modern quality assurance.",
   },
   {
-    icon: "🤝",
+    iconPath: "/images/value-hands.png",
     title: "Customer Trust",
     description: "Our promise is reliability. By prioritizing quality over mass production, we build lasting relationships with clients who value premium standards.",
   },
   {
-    icon: "🏆",
+    iconPath: "/images/value-chart.png",
     title: "Excellence Over Expansion",
     description: "Unlike companies chasing volume, we focus on delivering fewer but superior products — because excellence is our measure of success.",
   },
@@ -261,7 +261,15 @@ export default function HomePage() {
             {values.map((value, i) => (
               <AnimatedSection key={value.title} delay={i * 0.1} direction="scale">
                 <div className={styles.valueCard}>
-                  <span className={styles.valueIcon}>{value.icon}</span>
+                  <div className={styles.valueIconContainer}>
+                    <Image
+                      src={value.iconPath}
+                      alt={`${value.title} Icon`}
+                      width={64}
+                      height={64}
+                      className={styles.valueIconImage}
+                    />
+                  </div>
                   <h4 className={styles.valueTitle}>{value.title}</h4>
                   <p className={styles.valueDesc}>{value.description}</p>
                 </div>
