@@ -242,7 +242,7 @@ export default function AboutPage() {
           <AnimatedSection direction="up">
             <div className="section-header">
               <span className="subtitle">Trust & Transparency</span>
-              <h2>Our Certifications</h2>
+              <h2>Certifications</h2>
               <div className="divider" />
               <p>
                 Our manufacturers&apos; products are rigorously tested and certified, so you can trust what you taste.
