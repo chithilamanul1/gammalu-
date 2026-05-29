@@ -66,7 +66,7 @@ export default function ProductsPage() {
       <section className={styles.hero}>
         <div className={styles.heroImageWrap}>
           <Image
-            src="/images/cina4.png"
+            src="/images/cina4.jpg"
             alt="Curated collection of premium Ceylon spices"
             fill
             priority
