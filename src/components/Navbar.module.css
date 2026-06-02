@@ -36,14 +36,16 @@
 .logoImageWrap {
   display: flex;
   align-items: center;
-  height: 60px; /* Reduced from 120px to fit mobile navbar container height */
-  margin-top: 0;
-  margin-bottom: 0;
+  height: 90px; /* Increased from 60px to make logo larger */
+  margin-top: -15px;
+  margin-bottom: -15px;
   transition: all var(--transition-base);
 }
 
 .scrolled .logoImageWrap {
-  height: 50px;
+  height: 75px;
+  margin-top: -10px;
+  margin-bottom: -10px;
 }
 
 @media (min-width: 769px) {
