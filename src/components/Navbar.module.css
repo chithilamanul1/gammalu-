@@ -18,6 +18,13 @@
   backdrop-filter: blur(10px);
 }
 
+.navbarOpen {
+  height: 100vh !important;
+  background: var(--bg-primary) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
 .inner {
   max-width: 1400px;
   margin: 0 auto;

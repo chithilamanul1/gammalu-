@@ -32,18 +32,23 @@ export default function Navbar() {
 
   useEffect(() => {
     if (mobileOpen) {
-      document.body.style.overflow = "hidden";
+      document.documentElement.classList.add("menu-open");
+      document.body.classList.add("menu-open");
     } else {
-      document.body.style.overflow = "";
+      document.documentElement.classList.remove("menu-open");
+      document.body.classList.remove("menu-open");
     }
     return () => {
-      document.body.style.overflow = "";
+      document.documentElement.classList.remove("menu-open");
+      document.body.classList.remove("menu-open");
     };
   }, [mobileOpen]);
 
   return (
     <nav
-      className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}
+      className={`${styles.navbar} ${scrolled ? styles.scrolled : ""} ${
+        mobileOpen ? styles.navbarOpen : ""
+      }`}
       id="main-navigation"
     >
       <div className={styles.inner}>
